@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">首页三张记忆卡片 · 层级增强</title>
+  <desc id="desc">三张沿用首页底色的纯色记忆卡片，以更明显的旋转和上下错位关系交叠，整体保持居中。</desc>
+  <defs>
+    <filter id="shadow-back" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#536B74" flood-opacity=".12"/>
+    </filter>
+    <filter id="shadow-mid" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#536B74" flood-opacity=".14"/>
+    </filter>
+    <filter id="shadow-front" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#536B74" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="256" height="256" rx="58" fill="#E2E8EA"/>
+  <g transform="rotate(-8 124 97)" filter="url(#shadow-back)">
+    <rect x="54" y="37" width="140" height="120" rx="22" fill="#D0D9DD"/>
+  </g>
+  <g transform="rotate(5 127 126)" filter="url(#shadow-mid)">
+    <rect x="53" y="64" width="146" height="124" rx="22" fill="#E0E7E9"/>
+  </g>
+  <g transform="rotate(-2.5 128 160)" filter="url(#shadow-front)">
+    <rect x="52" y="96" width="152" height="128" rx="23" fill="#F1EBE3"/>
+  </g>
+</svg>

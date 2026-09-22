@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#e7ebed" />
+    <title>未完成_ App 原型</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--
+      PROTOTYPE ONLY
+      Question: 三张大卡片如何承担一级导航，并连接完整的个人数字记忆流程？
+      Variants: A 垂直叠页, B 错位索引, C 扇形卡组
+    -->
+    <main class="prototype-shell">
+      <section class="context-panel" aria-label="原型说明">
+        <p class="context-kicker">App 交互原型</p>
+        <h1>三张卡，<br />一整套记忆流程。</h1>
+        <p class="context-copy">
+          点击任意卡片进入功能。向左右拨动前卡，让下一种与过去相遇的方式浮上来。
+        </p>
+        <div class="context-rule" aria-hidden="true"></div>
+        <p class="context-hint">底部可以切换结构方案和首页状态。</p>
+      </section>
+
+      <div class="device" aria-label="Android 手机界面预览">
+        <div class="app" id="app" data-variant="A" data-surface="quiet">
+          <header class="home-header" aria-label="首页工具" aria-live="polite">
+            <button class="return-signal" id="returnSignal" type="button" aria-label="打开今天回来的一页">
+              <span class="return-dot" aria-hidden="true"></span>
+              <span id="homeLine">有一页回来</span>
+            </button>
+            <button class="text-button settings-button" type="button" aria-label="打开设置">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 7h5m4 0h7M4 17h9m4 0h3" />
+                <circle cx="11" cy="7" r="2" />
+                <circle cx="15" cy="17" r="2" />
+              </svg>
+            </button>
+          </header>
+
+          <section class="card-stage" aria-label="主要功能">
+            <button class="home-card card-past" type="button" data-card="past" aria-label="打开很久以前">
+              <span class="card-tab">
+                <span class="card-name">过去</span>
+                <span class="card-meta">28 段</span>
+              </span>
+              <span class="card-content">
+                <span class="card-title">很久以前</span>
+                <span class="card-description">明确寻找一段过去。</span>
+                <span class="card-action">查看</span>
+              </span>
+            </button>
+
+            <button class="home-card card-encounter" type="button" data-card="encounter" aria-label="遇见过去">
+              <span class="card-tab">
+                <span class="card-name" id="encounterTab">遇见</span>
+                <span class="card-meta" id="encounterMeta">随机</span>
+              </span>
+              <span class="card-content">
+                <span class="card-title" id="encounterTitle">遇见过去</span>
+                <span class="card-description" id="encounterDescription">不知道会遇见什么。</span>
+                <span class="card-action" id="encounterAction">遇见</span>
+              </span>
+            </button>
+
+            <button class="home-card card-leave" type="button" data-card="leave" aria-label="留下一段新记忆">
+              <span class="card-tab">
+                <span class="card-name">留下</span>
+                <span class="card-meta">空白页</span>
+              </span>
+              <span class="card-content">
+                <span class="plus-mark" aria-hidden="true">＋</span>
+                <span class="card-title">留下一段</span>
+                <span class="card-description">今天有一些东西，想留给以后。</span>
+                <span class="card-action">开始写</span>
+              </span>
+            </button>
+          </section>
+
+          <p class="gesture-hint" id="gestureHint">左右拨动切换，点按打开</p>
+
+          <section class="function-panel" id="functionPanel" aria-hidden="true" aria-live="polite">
+            <div class="panel-inner" id="panelInner"></div>
+          </section>
+
+          <div class="toast" id="toast" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+    </main>
+
+    <nav class="prototype-bar" aria-label="原型方案切换">
+      <button class="bar-button" id="previousVariant" type="button" aria-label="上一个方案">←</button>
+      <div class="variant-readout">
+        <span id="variantLabel">A 垂直叠页</span>
+        <span id="stateReadout">安静状态</span>
+      </div>
+      <button class="bar-button" id="nextVariant" type="button" aria-label="下一个方案">→</button>
+      <span class="bar-divider" aria-hidden="true"></span>
+      <button class="state-button" id="toggleState" type="button">切换浮现状态</button>
+    </nav>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>未完成 · 图标候选</title>
+  <style>
+    :root {
+      --page: #dce3e5;
+      --surface: rgba(250, 251, 250, .78);
+      --surface-strong: #f7f8f7;
+      --ink: #20313a;
+      --muted: #6f7e84;
+      --line: rgba(49, 93, 120, .14);
+      --accent: #315d78;
+      --signal: #e87855;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+      background: radial-gradient(circle at 16% 0%, #eef2f2 0 26%, transparent 52%), var(--page);
+    }
+    main { max-width: 1120px; margin: 0 auto; padding: 56px 28px 72px; }
+    .eyebrow { margin: 0 0 12px; color: var(--accent); font-size: 12px; letter-spacing: .18em; font-weight: 700; }
+    h1 { margin: 0; font-family: Georgia, "Songti SC", serif; font-size: clamp(34px, 5vw, 56px); font-weight: 500; letter-spacing: -.04em; }
+    .intro { max-width: 620px; margin: 16px 0 34px; color: var(--muted); font-size: 15px; line-height: 1.8; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .option { position: relative; padding: 22px; border: 1px solid var(--line); border-radius: 28px; background: var(--surface); box-shadow: 0 18px 46px rgba(40, 64, 73, .09); backdrop-filter: blur(12px); }
+    .option.recommended { border-color: rgba(232, 120, 85, .48); box-shadow: 0 18px 48px rgba(232, 120, 85, .12); }
+    .tag { position: absolute; top: 18px; right: 18px; padding: 5px 9px; border-radius: 999px; color: #fff; background: var(--signal); font-size: 11px; font-weight: 700; }
+    .tag.source { background: var(--accent); }
+    .icon-wrap { display: grid; place-items: center; min-height: 250px; border-radius: 20px; background: var(--surface-strong); }
+    .icon-wrap img { width: min(190px, 72%); height: auto; display: block; }
+    h2 { margin: 20px 0 8px; font-size: 19px; font-weight: 700; }
+    .desc { min-height: 54px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .meta { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; }
+    .meta span { padding: 6px 9px; border-radius: 999px; background: #e9eef0; color: #53656d; font-size: 11px; }
+    .scale { display: flex; align-items: end; gap: 13px; margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--line); }
+    .scale figure { margin: 0; display: grid; justify-items: center; gap: 6px; color: var(--muted); font-size: 10px; }
+    .scale img { display: block; width: 48px; height: 48px; }
+    .scale figure:last-child img { width: 32px; height: 32px; }
+    .guide { margin-top: 22px; padding: 20px 22px; border-radius: 22px; background: rgba(247, 248, 247, .72); border: 1px solid var(--line); }
+    .guide strong { color: var(--accent); }
+    .guide p { margin: 8px 0 0; color: var(--muted); line-height: 1.75; font-size: 14px; }
+    footer { margin-top: 28px; color: #879399; font-size: 12px; }
+    @media (max-width: 820px) { main { padding: 36px 18px 52px; } .grid { grid-template-columns: 1fr; } .icon-wrap { min-height: 210px; } .desc { min-height: 0; } }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">UNFINISHED · ICON STUDY 01</p>
+    <h1>给「未完成」选一个入口</h1>
+    <p class="intro">六个版本都沿用首页的卡片语言与冷静配色，重点比较它们在启动器小尺寸下的识别度，以及与“留下、添加线索、封存”这条产品叙事的贴合程度。</p>
+
+    <section class="grid" aria-label="图标候选方案">
+      <article class="option recommended">
+        <span class="tag">推荐</span>
+        <div class="icon-wrap"><img src="./icon-card-gap.svg" alt="方案 A：未封口的记忆卡片" /></div>
+        <h2>A · 未封口的记忆卡片</h2>
+        <p class="desc">两张错位叠放的卡片，前卡刻意留出的开口对应“未完成”，橙色点是等待补上的线索。</p>
+        <div class="meta"><span>首页卡片呼应</span><span>记忆感明确</span><span>小尺寸稳定</span></div>
+        <div class="scale" aria-label="方案 A 小尺寸测试"><figure><img src="./icon-card-gap.svg" alt="" /><figcaption>48 px</figcaption></figure><figure><img src="./icon-card-gap.svg" alt="" /><figcaption>32 px</figcaption></figure></div>
+      </article>
+
+      <article class="option">
+        <div class="icon-wrap"><img src="./icon-folded-page.svg" alt="方案 B：未写完的纸页" /></div>
+        <h2>B · 未写完的纸页</h2>
+        <p class="desc">更像一张被暂存的纸条，折角和断开的底线传达“还没写完”，气质安静、偏编辑感。</p>
+        <div class="meta"><span>叙事直观</span><span>纸张质感</span><span>辨识度中等</span></div>
+        <div class="scale" aria-label="方案 B 小尺寸测试"><figure><img src="./icon-folded-page.svg" alt="" /><figcaption>48 px</figcaption></figure><figure><img src="./icon-folded-page.svg" alt="" /><figcaption>32 px</figcaption></figure></div>
+      </article>
+
+      <article class="option">
+        <div class="icon-wrap"><img src="./icon-open-loop.svg" alt="方案 C：未完成的记忆回环" /></div>
+        <h2>C · 未完成的记忆回环</h2>
+        <p class="desc">开放的回环像“想起—补充—再想起”的循环，最抽象，也最适合做极简品牌符号。</p>
+        <div class="meta"><span>品牌感强</span><span>抽象克制</span><span>小尺寸需确认</span></div>
+        <div class="scale" aria-label="方案 C 小尺寸测试"><figure><img src="./icon-open-loop.svg" alt="" /><figcaption>48 px</figcaption></figure><figure><img src="./icon-open-loop.svg" alt="" /><figcaption>32 px</figcaption></figure></div>
+      </article>
+
+      <article class="option">
+        <span class="tag source">首页同源</span>
+        <div class="icon-wrap"><img src="./icon-three-cards.svg" alt="方案 D：首页三张记忆卡片" /></div>
+        <h2>D · 三张记忆卡片</h2>
+        <p class="desc">完全抽取首页三张卡片的上下错位关系与三种底色；把旋转角度放大，并用很轻的外部阴影拉开层级，不加边框、文字或额外符号。</p>
+        <div class="meta"><span>首页视觉一致</span><span>角度更明显</span><span>居中堆叠</span></div>
+        <div class="scale" aria-label="方案 D 小尺寸测试"><figure><img src="./icon-three-cards.svg" alt="" /><figcaption>48 px</figcaption></figure><figure><img src="./icon-three-cards.svg" alt="" /><figcaption>32 px</figcaption></figure></div>
+      </article>
+
+      <article class="option">
+        <span class="tag source">D 优化</span>
+        <div class="icon-wrap"><img src="./icon-three-cards-balanced.svg" alt="方案 D2：紧凑居中上下叠放" /></div>
+        <h2>D2 · 紧凑居中</h2>
+        <p class="desc">这次只增加左右露边，上下位置保持 D2 原来的关系，让三张卡片有呼吸感又不变成长条形。</p>
+        <div class="meta"><span>左右分离度</span><span>上下关系不变</span><span>重心居中</span></div>
+        <div class="scale" aria-label="方案 D2 小尺寸测试"><figure><img src="./icon-three-cards-balanced.svg" alt="" /><figcaption>48 px</figcaption></figure><figure><img src="./icon-three-cards-balanced.svg" alt="" /><figcaption>32 px</figcaption></figure></div>
+      </article>
+
+      <article class="option">
+        <span class="tag source">左右重叠</span>
+        <div class="icon-wrap"><img src="./icon-three-cards-horizontal.svg" alt="方案 E：首页三张记忆卡片左右重叠" /></div>
+        <h2>E · 三张卡片（左右重叠）</h2>
+        <p class="desc">保留三张卡片的上下重叠和原有层级，但把主要错位改为左右展开，让每张卡片的侧边都能被看见。</p>
+        <div class="meta"><span>首页配色</span><span>横向错位</span><span>中心稳定</span></div>
+        <div class="scale" aria-label="方案 E 小尺寸测试"><figure><img src="./icon-three-cards-horizontal.svg" alt="" /><figcaption>48 px</figcaption></figure><figure><img src="./icon-three-cards-horizontal.svg" alt="" /><figcaption>32 px</figcaption></figure></div>
+      </article>
+    </section>
+
+    <aside class="guide"><strong>选择建议</strong><p>如果希望图标一眼就让人联想到首页的卡片语言，选 A；如果想更像一枚安静的“记忆纸页”，选 B；如果想把“未完成”做成长期品牌符号，选 C；如果最看重首页与图标的一致性、接受更明显的长条形上下堆叠，选 D；如果希望卡组保持居中，只增加左右分离度而不改变上下关系，选 D2；如果希望卡片在图标里向左右展开、同时保留上下层叠，选 E。D、D2 与 E 都使用层级增强版的旋转和轻阴影，整体几何中心保持在图标中心。确定方向后，我再把它适配为 Android 自适应图标并替换到真机包中。</p></aside>
+    <footer>这是视觉候选预览，不会修改当前 App 图标。</footer>
+  </main>
+</body>
+</html>

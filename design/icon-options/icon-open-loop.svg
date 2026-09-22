@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">未完成的记忆回环</title>
+  <desc id="desc">一条没有闭合的蓝灰色回环围绕一张记忆卡片，开口处有暖橙色提示点。</desc>
+  <rect width="256" height="256" rx="58" fill="#E7EBED"/>
+  <path d="M187 77a75 75 0 1 0 8 80" fill="none" stroke="#315D78" stroke-width="11" stroke-linecap="round"/>
+  <path d="M184 77l6 27 25-7" fill="none" stroke="#315D78" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="75" y="86" width="91" height="86" rx="18" fill="#F1EBE3" stroke="#315D78" stroke-width="7" transform="rotate(-4 121 129)"/>
+  <path d="M96 116h43M96 139h30" stroke="#9AAAB1" stroke-width="7" stroke-linecap="round" transform="rotate(-4 121 129)"/>
+  <circle cx="192" cy="166" r="10" fill="#E87855"/>
+  <circle cx="192" cy="166" r="17" fill="none" stroke="#E87855" stroke-width="3" opacity=".32"/>
+</svg>

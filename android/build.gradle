@@ -1,0 +1,21 @@
+buildscript {
+    ext {
+        composeBomVersion = '2024.12.01'
+        activityComposeVersion = '1.10.0'
+        lifecycleVersion = '2.8.7'
+        coreKtxVersion = '1.15.0'
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.13.0'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:2.2.20'
+        classpath 'org.jetbrains.kotlin:compose-compiler-gradle-plugin:2.2.20'
+    }
+}
+
+tasks.register('clean', Delete) {
+    delete rootProject.buildDir
+}

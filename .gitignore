@@ -1,0 +1,39 @@
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+*.iml
+.vscode/
+
+# Gradle and Android generated files
+.gradle/
+**/.gradle/
+**/build/
+.externalNativeBuild/
+.cxx/
+captures/
+*.apk
+*.aab
+*.apks
+
+# Server build output
+server/target/
+
+# Local runtime configuration and credentials
+.env
+.env.*
+!**/.env.example
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+
+# Local debug captures, device dumps and build logs
+/debug/
+*.log
+
+# Local secrets used by tools
+local.properties
+google-services.json

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">未写完的纸页</title>
+  <desc id="desc">一张带折角的纸页，底部线条故意没有写完，象征尚未封存的记忆。</desc>
+  <rect width="256" height="256" rx="58" fill="#F1EBE3"/>
+  <path d="M67 190V76c0-13 10-24 24-24h66l33 36v102" fill="#E7EBED"/>
+  <path d="M67 190V76c0-13 10-24 24-24h66l33 36v75" fill="none" stroke="#315D78" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M157 53v35c0 1 1 2 3 2h30" fill="#D0D9DD" stroke="#315D78" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M92 112h69M92 136h47" stroke="#9AAAB1" stroke-width="8" stroke-linecap="round"/>
+  <path d="M92 169h46" stroke="#315D78" stroke-width="8" stroke-linecap="round" opacity=".7"/>
+  <circle cx="165" cy="169" r="9" fill="#E87855"/>
+  <path d="M178 190h12" stroke="#315D78" stroke-width="8" stroke-linecap="round" opacity=".55"/>
+</svg>

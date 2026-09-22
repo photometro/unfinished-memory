@@ -1,0 +1,116 @@
+openapi: 3.0.3
+info:
+  title: Unfinished Sync API
+  version: 0.2.0
+  description: Anonymous vault API. Payload fields are client-encrypted and opaque to the server.
+servers:
+  - url: http://localhost:8080
+security:
+  - bearerAuth: []
+paths:
+  /api/health:
+    get:
+      security: []
+      responses:
+        '200': { description: Service is healthy }
+  /api/device/bootstrap:
+    post:
+      security: []
+      summary: Create an anonymous vault and device token
+      responses:
+        '201':
+          description: Bootstrap credentials
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/BootstrapResponse' }
+  /api/sync/push:
+    post:
+      summary: Push client-encrypted records
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [records]
+              properties:
+                records:
+                  type: array
+                  items: { $ref: '#/components/schemas/EncryptedRecord' }
+      responses:
+        '200': { description: Accepted records }
+        '401': { description: Invalid device token }
+  /api/sync/pull:
+    get:
+      summary: Pull encrypted records after a cursor
+      parameters:
+        - { name: cursor, in: query, schema: { type: integer, format: int64, default: 0 } }
+        - { name: limit, in: query, schema: { type: integer, minimum: 1, maximum: 500, default: 200 } }
+      responses:
+        '200': { description: Incremental encrypted records }
+        '401': { description: Invalid device token }
+  /api/backup:
+    post:
+      summary: Store an encrypted backup snapshot
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [ciphertext, contentHash]
+              properties:
+                ciphertext: { type: string }
+                contentHash: { type: string }
+      responses:
+        '200': { description: Snapshot created }
+  /api/backup/{snapshotId}:
+    get:
+      summary: Download an encrypted backup snapshot
+      parameters:
+        - { name: snapshotId, in: path, required: true, schema: { type: string, format: uuid } }
+      responses:
+        '200': { description: Encrypted snapshot }
+        '404': { description: Snapshot not found }
+  /api/media/upload-ticket:
+    post:
+      summary: Request a private image upload ticket
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [entityId, fileName, sha256]
+              properties:
+                entityId: { type: string }
+                fileName: { type: string }
+                sha256: { type: string }
+                sizeBytes: { type: integer, format: int64 }
+                contentType: { type: string }
+      responses:
+        '200': { description: Upload ticket }
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+  schemas:
+    BootstrapResponse:
+      type: object
+      required: [vaultId, deviceId, deviceToken]
+      properties:
+        vaultId: { type: string, format: uuid }
+        deviceId: { type: string, format: uuid }
+        deviceToken: { type: string }
+    EncryptedRecord:
+      type: object
+      required: [recordId, entityType, entityId, version, ciphertext, contentHash]
+      properties:
+        recordId: { type: string, format: uuid }
+        entityType: { type: string }
+        entityId: { type: string }
+        version: { type: integer, format: int64 }
+        ciphertext: { type: string }
+        contentHash: { type: string }
+        deletedAt: { type: integer, format: int64, nullable: true }

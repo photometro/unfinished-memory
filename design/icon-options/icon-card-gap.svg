@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">未封口的记忆卡片</title>
+  <desc id="desc">两张错位叠放的记忆卡片，前卡右侧留出未完成的开口，并以暖橙色圆点标记。</desc>
+  <rect width="256" height="256" rx="58" fill="#E7EBED"/>
+  <g transform="rotate(-5 119 126)">
+    <rect x="44" y="56" width="150" height="128" rx="24" fill="#D0D9DD" stroke="#315D78" stroke-width="7"/>
+  </g>
+  <g transform="rotate(4 135 133)">
+    <rect x="61" y="71" width="145" height="125" rx="23" fill="#F1EBE3"/>
+    <path d="M84 71h99c13 0 23 10 23 23v18" fill="none" stroke="#315D78" stroke-width="7" stroke-linecap="round"/>
+    <path d="M206 145v28c0 13-10 23-23 23H84c-13 0-23-10-23-23V94c0-13 10-23 23-23" fill="none" stroke="#315D78" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="206" cy="132" r="9" fill="#E87855"/>
+    <path d="M87 111h63M87 131h40" stroke="#9AAAB1" stroke-width="7" stroke-linecap="round"/>
+    <path d="M87 165h76" stroke="#315D78" stroke-width="7" stroke-linecap="round" opacity=".55"/>
+  </g>
+</svg>
