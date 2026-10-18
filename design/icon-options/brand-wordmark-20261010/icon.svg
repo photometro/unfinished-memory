@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <rect width="1024" height="1024" fill="#315E6C"/>
+  <path d="M0 792 C156 803 244 747 368 759 C530 775 638 697 775 713 C880 725 949 733 1024 707 L1024 1024 H0Z" fill="#3B6A77"/>
+  <path d="M0 896 C147 841 271 907 421 866 C583 822 684 838 792 809 C898 779 963 804 1024 795 L1024 1024 H0Z" fill="#477987"/>
+  <text x="512" y="578" text-anchor="middle" fill="#F6F0E3" font-family="Noto Sans SC, sans-serif" font-size="232" font-weight="700" letter-spacing="6">未完成</text>
+  <path d="M176 658 C281 620 346 678 435 673 C509 669 563 630 626 632 C661 633 687 646 716 648 L714 673 C680 674 653 660 626 660 C570 658 520 703 440 702 C344 702 282 649 181 682Z" fill="#ACCCD0"/>
+  <path d="M760 648 C800 646 827 633 850 616 C837 642 805 671 762 673Z" fill="#ACCCD0"/>
+</svg>

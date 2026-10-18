@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.Unfinished" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/opening_startup_background</item>
+        <item name="android:windowBackground">@color/opening_startup_background</item>
+        <item name="postSplashScreenTheme">@style/Theme.Unfinished.App</item>
+    </style>
+</resources>

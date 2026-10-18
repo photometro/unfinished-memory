@@ -1,0 +1,61 @@
+{
+  "status": "PASS: static asset checks only",
+  "reference": "<project-root>/design/icon-options/memory-emergence-20261011-c-vector-v1/icon-1024.png",
+  "colors": [
+    "#5DB2D0",
+    "#2876A7",
+    "#154E81"
+  ],
+  "background": "#FEFEFB",
+  "sourcePaths": 3,
+  "sourceGeometry": "Per-plane height compression with gap compensation; approved near-square adjustment",
+  "scale": 0.067650389,
+  "translate": [
+    11.583206059,
+    11.921458005
+  ],
+  "boundsDp": {
+    "minX": 32.148924334,
+    "maxX": 75.851075666,
+    "minY": 31.23846287,
+    "maxY": 76.76153713
+  },
+  "markSizeDp": [
+    43.702151333,
+    45.52307426
+  ],
+  "aspectRatio": 0.960000001,
+  "widthReductionFromV1": 0.060000003,
+  "totalHeightReductionFromV1": 0.15885417,
+  "centerGapsDp": [
+    1.8,
+    1.7
+  ],
+  "safeCircleRadiusDp": 29.021875038,
+  "safeCircleMarginDp": 3.978124962,
+  "maskClippedSolidPixels": {
+    "circle": 0,
+    "squircle": 0,
+    "rounded": 0
+  },
+  "maskEdgeRasterDifferencePixels": {
+    "circle": 23,
+    "squircle": 12,
+    "rounded": 0
+  },
+  "foregroundPixels1080": 179213,
+  "checked": [
+    "Export scale is exactly v1 scale multiplied by 0.94; no automatic scale-to-fit enlargement",
+    "Revised silhouette aspect ratio is 0.96:1",
+    "Entire mark fits within central 66dp circle with added breathing room",
+    "All three masks retain solid foreground pixels; minor antialias differences reported separately",
+    "Exactly three separated planes at center",
+    "SVG and Android XML share path data and fixed colors"
+  ],
+  "notChecked": [
+    "Recognition by users",
+    "Launcher/OEM theme rendering on phones",
+    "An installed app with this icon",
+    "Subjective visual acceptance"
+  ]
+}

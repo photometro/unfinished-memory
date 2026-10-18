@@ -1,0 +1,782 @@
+[
+  {
+    "count": 1,
+    "rect": {
+      "bottom": -41.20465087890625,
+      "height": 843.9898681640625,
+      "left": 167.89712524414062,
+      "right": 557.8891296386719,
+      "top": -885.1945190429688,
+      "width": 389.9920043945313,
+      "x": 167.89712524414062,
+      "y": -885.1945190429688
+    },
+    "scroll": {
+      "x": 0,
+      "y": 967.1641845703124
+    },
+    "surface": {
+      "animationActive": "true",
+      "assetDimensions": "887x1774,887x1774",
+      "decodedBytesEstimate": "12588304",
+      "frames": "16368",
+      "light": "1.0933,0.0323,0.0033,0.0093,1.0843,0.0032,0.0089,0.0298,1.0045,0.1050,0.0350,0.9600,-0.8200,-0.5700,0.0650,1.0000,0.6200,0.2300,0.0080",
+      "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+      "period": "morning",
+      "renderer": "webgl",
+      "shoreMaster": "selected-v4",
+      "surfaceStudy": "13",
+      "textureBytesEstimate": "3154176",
+      "textureCount": "2",
+      "tide": "0.0800"
+    },
+    "viewport": {
+      "height": 1074,
+      "width": 748
+    },
+    "period": "morning",
+    "tideName": "low",
+    "file": "morning-low-webgl.jpg"
+  },
+  {
+    "count": 1,
+    "rect": {
+      "bottom": 925.9594802856444,
+      "height": 843.9898681640625,
+      "left": 167.89712524414062,
+      "right": 557.8891296386719,
+      "top": 81.96961212158203,
+      "width": 389.9920043945313,
+      "x": 167.89712524414062,
+      "y": 81.96961212158203
+    },
+    "scroll": {
+      "x": 0,
+      "y": 0
+    },
+    "surface": {
+      "animationActive": "true",
+      "assetDimensions": "887x1774,887x1774",
+      "decodedBytesEstimate": "12588304",
+      "frames": "16399",
+      "light": "1.0933,0.0323,0.0033,0.0093,1.0843,0.0032,0.0089,0.0298,1.0045,0.1050,0.0350,0.9600,-0.8200,-0.5700,0.0650,1.0000,0.6200,0.2300,0.0080",
+      "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+      "period": "morning",
+      "renderer": "webgl",
+      "shoreMaster": "selected-v4",
+      "surfaceStudy": "13",
+      "textureBytesEstimate": "3154176",
+      "textureCount": "2",
+      "tide": "0.3000"
+    },
+    "viewport": {
+      "height": 1074,
+      "width": 748
+    },
+    "period": "morning",
+    "tideName": "mid",
+    "file": "morning-mid-webgl.jpg"
+  },
+  {
+    "count": 1,
+    "rect": {
+      "bottom": 925.9594802856444,
+      "height": 843.9898681640625,
+      "left": 167.89712524414062,
+      "right": 557.8891296386719,
+      "top": 81.96961212158203,
+      "width": 389.9920043945313,
+      "x": 167.89712524414062,
+      "y": 81.96961212158203
+    },
+    "scroll": {
+      "x": 0,
+      "y": 0
+    },
+    "surface": {
+      "animationActive": "true",
+      "assetDimensions": "887x1774,887x1774",
+      "decodedBytesEstimate": "12588304",
+      "frames": "16426",
+      "light": "1.0933,0.0323,0.0033,0.0093,1.0843,0.0032,0.0089,0.0298,1.0045,0.1050,0.0350,0.9600,-0.8200,-0.5700,0.0650,1.0000,0.6200,0.2300,0.0080",
+      "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+      "period": "morning",
+      "renderer": "webgl",
+      "shoreMaster": "selected-v4",
+      "surfaceStudy": "13",
+      "textureBytesEstimate": "3154176",
+      "textureCount": "2",
+      "tide": "0.5200"
+    },
+    "viewport": {
+      "height": 1074,
+      "width": 748
+    },
+    "period": "morning",
+    "tideName": "high",
+    "file": "morning-high-webgl.jpg"
+  },
+  {
+    "count": 1,
+    "rect": {
+      "bottom": -41.20465087890625,
+      "height": 843.9898681640625,
+      "left": 167.89712524414062,
+      "right": 557.8891296386719,
+      "top": -885.1945190429688,
+      "width": 389.9920043945313,
+      "x": 167.89712524414062,
+      "y": -885.1945190429688
+    },
+    "scroll": {
+      "x": 0,
+      "y": 967.1641845703124
+    },
+    "surface": {
+      "animationActive": "true",
+      "assetDimensions": "887x1774,887x1774",
+      "decodedBytesEstimate": "12588304",
+      "frames": "16463",
+      "light": "1.1419,-0.0239,-0.0024,-0.0072,1.1396,-0.0024,-0.0073,-0.0246,1.1808,0.1350,0.0250,1.0250,0.1500,-0.9900,0.0250,0.8800,0.9500,1.0000,0.0170",
+      "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+      "period": "noon",
+      "renderer": "webgl",
+      "shoreMaster": "selected-v4",
+      "surfaceStudy": "13",
+      "textureBytesEstimate": "3154176",
+      "textureCount": "2",
+      "tide": "0.0800"
+    },
+    "viewport": {
+      "height": 1074,
+      "width": 748
+    },
+    "period": "noon",
+    "tideName": "low",
+    "file": "noon-low-webgl.jpg"
+  },
+  {
+    "count": 1,
+    "rect": {
+      "bottom": 925.9594802856444,
+      "height": 843.9898681640625,
+      "left": 167.89712524414062,
+      "right": 557.8891296386719,
+      "top": 81.96961212158203,
+      "width": 389.9920043945313,
+      "x": 167.89712524414062,
+      "y": 81.96961212158203
+    },
+    "scroll": {
+      "x": 0,
+      "y": 0
+    },
+    "surface": {
+      "animationActive": "true",
+      "assetDimensions": "887x1774,887x1774",
+      "decodedBytesEstimate": "12588304",
+      "frames": "16489",
+      "light": "1.1419,-0.0239,-0.0024,-0.0072,1.1396,-0.0024,-0.0073,-0.0246,1.1808,0.1350,0.0250,1.0250,0.1500,-0.9900,0.0250,0.8800,0.9500,1.0000,0.0170",
+      "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+      "period": "noon",
+      "renderer": "webgl",
+      "shoreMaster": "selected-v4",
+      "surfaceStudy": "13",
+      "textureBytesEstimate": "3154176",
+      "textureCount": "2",
+      "tide": "0.3000"
+    },
+    "viewport": {
+      "height": 1074,
+      "width": 748
+    },
+    "period": "noon",
+    "tideName": "mid",
+    "file": "noon-mid-webgl.jpg"
+  },
+  {
+    "count": 1,
+    "rect": {
+      "bottom": 925.9594802856444,
+      "height": 843.9898681640625,
+      "left": 167.89712524414062,
+      "right": 557.8891296386719,
+      "top": 81.96961212158203,
+      "width": 389.9920043945313,
+      "x": 167.89712524414062,
+      "y": 81.96961212158203
+    },
+    "scroll": {
+      "x": 0,
+      "y": 0
+    },
+    "surface": {
+      "animationActive": "true",
+      "assetDimensions": "887x1774,887x1774",
+      "decodedBytesEstimate": "12588304",
+      "frames": "16515",
+      "light": "1.1419,-0.0239,-0.0024,-0.0072,1.1396,-0.0024,-0.0073,-0.0246,1.1808,0.1350,0.0250,1.0250,0.1500,-0.9900,0.0250,0.8800,0.9500,1.0000,0.0170",
+      "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+      "period": "noon",
+      "renderer": "webgl",
+      "shoreMaster": "selected-v4",
+      "surfaceStudy": "13",
+      "textureBytesEstimate": "3154176",
+      "textureCount": "2",
+      "tide": "0.5200"
+    },
+    "viewport": {
+      "height": 1074,
+      "width": 748
+    },
+    "period": "noon",
+    "tideName": "high",
+    "file": "noon-high-webgl.jpg"
+  },
+  {
+    "count": 1,
+    "rect": {
+      "bottom": -41.20465087890625,
+      "height": 843.9898681640625,
+      "left": 167.89712524414062,
+      "right": 557.8891296386719,
+      "top": -885.1945190429688,
+      "width": 389.9920043945313,
+      "x": 167.89712524414062,
+      "y": -885.1945190429688
+    },
+    "scroll": {
+      "x": 0,
+      "y": 967.1641845703124
+    },
+    "surface": {
+      "animationActive": "true",
+      "assetDimensions": "887x1774,887x1774",
+      "decodedBytesEstimate": "12588304",
+      "frames": "16550",
+      "light": "1.0939,0.0159,0.0016,0.0044,1.0244,0.0015,0.0039,0.0130,0.8916,0.0600,0.0200,1.0150,0.8700,-0.4900,0.1200,1.0000,0.5100,0.1500,0.0120",
+      "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+      "period": "afternoon",
+      "renderer": "webgl",
+      "shoreMaster": "selected-v4",
+      "surfaceStudy": "13",
+      "textureBytesEstimate": "3154176",
+      "textureCount": "2",
+      "tide": "0.0800"
+    },
+    "viewport": {
+      "height": 1074,
+      "width": 748
+    },
+    "period": "afternoon",
+    "tideName": "low",
+    "file": "afternoon-low-webgl.jpg"
+  },
+  {
+    "count": 1,
+    "rect": {
+      "bottom": 925.9594802856444,
+      "height": 843.9898681640625,
+      "left": 167.89712524414062,
+      "right": 557.8891296386719,
+      "top": 81.96961212158203,
+      "width": 389.9920043945313,
+      "x": 167.89712524414062,
+      "y": 81.96961212158203
+    },
+    "scroll": {
+      "x": 0,
+      "y": 0
+    },
+    "surface": {
+      "animationActive": "true",
+      "assetDimensions": "887x1774,887x1774",
+      "decodedBytesEstimate": "12588304",
+      "frames": "16579",
+      "light": "1.0939,0.0159,0.0016,0.0044,1.0244,0.0015,0.0039,0.0130,0.8916,0.0600,0.0200,1.0150,0.8700,-0.4900,0.1200,1.0000,0.5100,0.1500,0.0120",
+      "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+      "period": "afternoon",
+      "renderer": "webgl",
+      "shoreMaster": "selected-v4",
+      "surfaceStudy": "13",
+      "textureBytesEstimate": "3154176",
+      "textureCount": "2",
+      "tide": "0.3000"
+    },
+    "viewport": {
+      "height": 1074,
+      "width": 748
+    },
+    "period": "afternoon",
+    "tideName": "mid",
+    "file": "afternoon-mid-webgl.jpg"
+  },
+  {
+    "count": 1,
+    "rect": {
+      "bottom": 925.9594802856444,
+      "height": 843.9898681640625,
+      "left": 167.89712524414062,
+      "right": 557.8891296386719,
+      "top": 81.96961212158203,
+      "width": 389.9920043945313,
+      "x": 167.89712524414062,
+      "y": 81.96961212158203
+    },
+    "scroll": {
+      "x": 0,
+      "y": 0
+    },
+    "surface": {
+      "animationActive": "true",
+      "assetDimensions": "887x1774,887x1774",
+      "decodedBytesEstimate": "12588304",
+      "frames": "16606",
+      "light": "1.0939,0.0159,0.0016,0.0044,1.0244,0.0015,0.0039,0.0130,0.8916,0.0600,0.0200,1.0150,0.8700,-0.4900,0.1200,1.0000,0.5100,0.1500,0.0120",
+      "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+      "period": "afternoon",
+      "renderer": "webgl",
+      "shoreMaster": "selected-v4",
+      "surfaceStudy": "13",
+      "textureBytesEstimate": "3154176",
+      "textureCount": "2",
+      "tide": "0.5200"
+    },
+    "viewport": {
+      "height": 1074,
+      "width": 748
+    },
+    "period": "afternoon",
+    "tideName": "high",
+    "file": "afternoon-high-webgl.jpg"
+  },
+  {
+    "count": 1,
+    "rect": {
+      "bottom": -41.20465087890625,
+      "height": 843.9898681640625,
+      "left": 167.89712524414062,
+      "right": 557.8891296386719,
+      "top": -885.1945190429688,
+      "width": 389.9920043945313,
+      "x": 167.89712524414062,
+      "y": -885.1945190429688
+    },
+    "scroll": {
+      "x": 0,
+      "y": 967.1641845703124
+    },
+    "surface": {
+      "animationActive": "true",
+      "assetDimensions": "887x1774,887x1774",
+      "decodedBytesEstimate": "12588304",
+      "frames": "16643",
+      "light": "0.2765,0.0526,0.0053,0.0206,0.4124,0.0070,0.0255,0.0858,0.4342,0.0220,0.0350,1.0000,-0.6200,-0.7800,0.0350,0.2200,0.5500,1.0000,0.0120",
+      "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+      "period": "night",
+      "renderer": "webgl",
+      "shoreMaster": "selected-v4",
+      "surfaceStudy": "13",
+      "textureBytesEstimate": "3154176",
+      "textureCount": "2",
+      "tide": "0.0800"
+    },
+    "viewport": {
+      "height": 1074,
+      "width": 748
+    },
+    "period": "night",
+    "tideName": "low",
+    "file": "night-low-webgl.jpg"
+  },
+  {
+    "count": 1,
+    "rect": {
+      "bottom": 925.9594802856444,
+      "height": 843.9898681640625,
+      "left": 167.89712524414062,
+      "right": 557.8891296386719,
+      "top": 81.96961212158203,
+      "width": 389.9920043945313,
+      "x": 167.89712524414062,
+      "y": 81.96961212158203
+    },
+    "scroll": {
+      "x": 0,
+      "y": 0
+    },
+    "surface": {
+      "animationActive": "true",
+      "assetDimensions": "887x1774,887x1774",
+      "decodedBytesEstimate": "12588304",
+      "frames": "16669",
+      "light": "0.2765,0.0526,0.0053,0.0206,0.4124,0.0070,0.0255,0.0858,0.4342,0.0220,0.0350,1.0000,-0.6200,-0.7800,0.0350,0.2200,0.5500,1.0000,0.0120",
+      "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+      "period": "night",
+      "renderer": "webgl",
+      "shoreMaster": "selected-v4",
+      "surfaceStudy": "13",
+      "textureBytesEstimate": "3154176",
+      "textureCount": "2",
+      "tide": "0.3000"
+    },
+    "viewport": {
+      "height": 1074,
+      "width": 748
+    },
+    "period": "night",
+    "tideName": "mid",
+    "file": "night-mid-webgl.jpg"
+  },
+  {
+    "count": 1,
+    "rect": {
+      "bottom": 925.9594802856444,
+      "height": 843.9898681640625,
+      "left": 167.89712524414062,
+      "right": 557.8891296386719,
+      "top": 81.96961212158203,
+      "width": 389.9920043945313,
+      "x": 167.89712524414062,
+      "y": 81.96961212158203
+    },
+    "scroll": {
+      "x": 0,
+      "y": 0
+    },
+    "surface": {
+      "animationActive": "true",
+      "assetDimensions": "887x1774,887x1774",
+      "decodedBytesEstimate": "12588304",
+      "frames": "16699",
+      "light": "0.2765,0.0526,0.0053,0.0206,0.4124,0.0070,0.0255,0.0858,0.4342,0.0220,0.0350,1.0000,-0.6200,-0.7800,0.0350,0.2200,0.5500,1.0000,0.0120",
+      "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+      "period": "night",
+      "renderer": "webgl",
+      "shoreMaster": "selected-v4",
+      "surfaceStudy": "13",
+      "textureBytesEstimate": "3154176",
+      "textureCount": "2",
+      "tide": "0.5200"
+    },
+    "viewport": {
+      "height": 1074,
+      "width": 748
+    },
+    "period": "night",
+    "tideName": "high",
+    "file": "night-high-webgl.jpg"
+  },
+  {
+    "count": 1,
+    "rect": {
+      "bottom": -41.20465087890625,
+      "height": 843.9898681640625,
+      "left": 167.89712524414062,
+      "right": 557.8891296386719,
+      "top": -885.1945190429688,
+      "width": 389.9920043945313,
+      "x": 167.89712524414062,
+      "y": -885.1945190429688
+    },
+    "scroll": {
+      "x": 0,
+      "y": 967.1641845703124
+    },
+    "surface": {
+      "animationActive": "false",
+      "assetDimensions": "887x1774,887x1774",
+      "decodedBytesEstimate": "12588304",
+      "frames": "1",
+      "light": "1.0933,0.0323,0.0033,0.0093,1.0843,0.0032,0.0089,0.0298,1.0045,0.1050,0.0350,0.9600,-0.8200,-0.5700,0.0650,1.0000,0.6200,0.2300,0.0080",
+      "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+      "period": "morning",
+      "renderer": "static",
+      "shoreMaster": "selected-v4",
+      "surfaceStudy": "13",
+      "textureBytesEstimate": "0",
+      "textureCount": "0",
+      "tide": "0.0800"
+    },
+    "viewport": {
+      "height": 1074,
+      "width": 748
+    },
+    "period": "morning",
+    "tideName": "low",
+    "file": "morning-low-static.jpg"
+  },
+  {
+    "count": 1,
+    "rect": {
+      "bottom": 925.9594802856444,
+      "height": 843.9898681640625,
+      "left": 167.89712524414062,
+      "right": 557.8891296386719,
+      "top": 81.96961212158203,
+      "width": 389.9920043945313,
+      "x": 167.89712524414062,
+      "y": 81.96961212158203
+    },
+    "scroll": {
+      "x": 0,
+      "y": 0
+    },
+    "surface": {
+      "animationActive": "false",
+      "assetDimensions": "887x1774,887x1774",
+      "decodedBytesEstimate": "12588304",
+      "frames": "9",
+      "light": "1.0933,0.0323,0.0033,0.0093,1.0843,0.0032,0.0089,0.0298,1.0045,0.1050,0.0350,0.9600,-0.8200,-0.5700,0.0650,1.0000,0.6200,0.2300,0.0080",
+      "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+      "period": "morning",
+      "renderer": "static",
+      "shoreMaster": "selected-v4",
+      "surfaceStudy": "13",
+      "textureBytesEstimate": "0",
+      "textureCount": "0",
+      "tide": "0.5200"
+    },
+    "viewport": {
+      "height": 1074,
+      "width": 748
+    },
+    "period": "morning",
+    "tideName": "high",
+    "file": "morning-high-static.jpg"
+  },
+  {
+    "count": 1,
+    "rect": {
+      "bottom": -41.20465087890625,
+      "height": 843.9898681640625,
+      "left": 167.89712524414062,
+      "right": 557.8891296386719,
+      "top": -885.1945190429688,
+      "width": 389.9920043945313,
+      "x": 167.89712524414062,
+      "y": -885.1945190429688
+    },
+    "scroll": {
+      "x": 0,
+      "y": 967.1641845703124
+    },
+    "surface": {
+      "animationActive": "false",
+      "assetDimensions": "887x1774,887x1774",
+      "decodedBytesEstimate": "12588304",
+      "frames": "21",
+      "light": "1.1419,-0.0239,-0.0024,-0.0072,1.1396,-0.0024,-0.0073,-0.0246,1.1808,0.1350,0.0250,1.0250,0.1500,-0.9900,0.0250,0.8800,0.9500,1.0000,0.0170",
+      "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+      "period": "noon",
+      "renderer": "static",
+      "shoreMaster": "selected-v4",
+      "surfaceStudy": "13",
+      "textureBytesEstimate": "0",
+      "textureCount": "0",
+      "tide": "0.0800"
+    },
+    "viewport": {
+      "height": 1074,
+      "width": 748
+    },
+    "period": "noon",
+    "tideName": "low",
+    "file": "noon-low-static.jpg"
+  },
+  {
+    "count": 1,
+    "rect": {
+      "bottom": 925.9594802856444,
+      "height": 843.9898681640625,
+      "left": 167.89712524414062,
+      "right": 557.8891296386719,
+      "top": 81.96961212158203,
+      "width": 389.9920043945313,
+      "x": 167.89712524414062,
+      "y": 81.96961212158203
+    },
+    "scroll": {
+      "x": 0,
+      "y": 0
+    },
+    "surface": {
+      "animationActive": "false",
+      "assetDimensions": "887x1774,887x1774",
+      "decodedBytesEstimate": "12588304",
+      "frames": "29",
+      "light": "1.1419,-0.0239,-0.0024,-0.0072,1.1396,-0.0024,-0.0073,-0.0246,1.1808,0.1350,0.0250,1.0250,0.1500,-0.9900,0.0250,0.8800,0.9500,1.0000,0.0170",
+      "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+      "period": "noon",
+      "renderer": "static",
+      "shoreMaster": "selected-v4",
+      "surfaceStudy": "13",
+      "textureBytesEstimate": "0",
+      "textureCount": "0",
+      "tide": "0.5200"
+    },
+    "viewport": {
+      "height": 1074,
+      "width": 748
+    },
+    "period": "noon",
+    "tideName": "high",
+    "file": "noon-high-static.jpg"
+  },
+  {
+    "count": 1,
+    "rect": {
+      "bottom": -41.20465087890625,
+      "height": 843.9898681640625,
+      "left": 167.89712524414062,
+      "right": 557.8891296386719,
+      "top": -885.1945190429688,
+      "width": 389.9920043945313,
+      "x": 167.89712524414062,
+      "y": -885.1945190429688
+    },
+    "scroll": {
+      "x": 0,
+      "y": 967.1641845703124
+    },
+    "surface": {
+      "animationActive": "false",
+      "assetDimensions": "887x1774,887x1774",
+      "decodedBytesEstimate": "12588304",
+      "frames": "41",
+      "light": "1.0939,0.0159,0.0016,0.0044,1.0244,0.0015,0.0039,0.0130,0.8916,0.0600,0.0200,1.0150,0.8700,-0.4900,0.1200,1.0000,0.5100,0.1500,0.0120",
+      "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+      "period": "afternoon",
+      "renderer": "static",
+      "shoreMaster": "selected-v4",
+      "surfaceStudy": "13",
+      "textureBytesEstimate": "0",
+      "textureCount": "0",
+      "tide": "0.0800"
+    },
+    "viewport": {
+      "height": 1074,
+      "width": 748
+    },
+    "period": "afternoon",
+    "tideName": "low",
+    "file": "afternoon-low-static.jpg"
+  },
+  {
+    "count": 1,
+    "rect": {
+      "bottom": 925.9594802856444,
+      "height": 843.9898681640625,
+      "left": 167.89712524414062,
+      "right": 557.8891296386719,
+      "top": 81.96961212158203,
+      "width": 389.9920043945313,
+      "x": 167.89712524414062,
+      "y": 81.96961212158203
+    },
+    "scroll": {
+      "x": 0,
+      "y": 0
+    },
+    "surface": {
+      "animationActive": "false",
+      "assetDimensions": "887x1774,887x1774",
+      "decodedBytesEstimate": "12588304",
+      "frames": "49",
+      "light": "1.0939,0.0159,0.0016,0.0044,1.0244,0.0015,0.0039,0.0130,0.8916,0.0600,0.0200,1.0150,0.8700,-0.4900,0.1200,1.0000,0.5100,0.1500,0.0120",
+      "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+      "period": "afternoon",
+      "renderer": "static",
+      "shoreMaster": "selected-v4",
+      "surfaceStudy": "13",
+      "textureBytesEstimate": "0",
+      "textureCount": "0",
+      "tide": "0.5200"
+    },
+    "viewport": {
+      "height": 1074,
+      "width": 748
+    },
+    "period": "afternoon",
+    "tideName": "high",
+    "file": "afternoon-high-static.jpg"
+  },
+  {
+    "count": 1,
+    "rect": {
+      "bottom": -41.20465087890625,
+      "height": 843.9898681640625,
+      "left": 167.89712524414062,
+      "right": 557.8891296386719,
+      "top": -885.1945190429688,
+      "width": 389.9920043945313,
+      "x": 167.89712524414062,
+      "y": -885.1945190429688
+    },
+    "scroll": {
+      "x": 0,
+      "y": 967.1641845703124
+    },
+    "surface": {
+      "animationActive": "false",
+      "assetDimensions": "887x1774,887x1774",
+      "decodedBytesEstimate": "12588304",
+      "frames": "63",
+      "light": "0.2765,0.0526,0.0053,0.0206,0.4124,0.0070,0.0255,0.0858,0.4342,0.0220,0.0350,1.0000,-0.6200,-0.7800,0.0350,0.2200,0.5500,1.0000,0.0120",
+      "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+      "period": "night",
+      "renderer": "static",
+      "shoreMaster": "selected-v4",
+      "surfaceStudy": "13",
+      "textureBytesEstimate": "0",
+      "textureCount": "0",
+      "tide": "0.0800"
+    },
+    "viewport": {
+      "height": 1074,
+      "width": 748
+    },
+    "period": "night",
+    "tideName": "low",
+    "file": "night-low-static.jpg"
+  },
+  {
+    "count": 1,
+    "rect": {
+      "bottom": 925.9594802856444,
+      "height": 843.9898681640625,
+      "left": 167.89712524414062,
+      "right": 557.8891296386719,
+      "top": 81.96961212158203,
+      "width": 389.9920043945313,
+      "x": 167.89712524414062,
+      "y": 81.96961212158203
+    },
+    "scroll": {
+      "x": 0,
+      "y": 0
+    },
+    "surface": {
+      "animationActive": "false",
+      "assetDimensions": "887x1774,887x1774",
+      "decodedBytesEstimate": "12588304",
+      "frames": "71",
+      "light": "0.2765,0.0526,0.0053,0.0206,0.4124,0.0070,0.0255,0.0858,0.4342,0.0220,0.0350,1.0000,-0.6200,-0.7800,0.0350,0.2200,0.5500,1.0000,0.0120",
+      "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+      "period": "night",
+      "renderer": "static",
+      "shoreMaster": "selected-v4",
+      "surfaceStudy": "13",
+      "textureBytesEstimate": "0",
+      "textureCount": "0",
+      "tide": "0.5200"
+    },
+    "viewport": {
+      "height": 1074,
+      "width": 748
+    },
+    "period": "night",
+    "tideName": "high",
+    "file": "night-high-static.jpg"
+  }
+]

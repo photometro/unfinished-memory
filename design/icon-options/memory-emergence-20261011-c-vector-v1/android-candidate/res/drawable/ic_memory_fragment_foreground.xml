@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
+  <group android:name="memory_fragments" android:scaleX="0.071968499" android:scaleY="0.071968499" android:translateX="8.875751" android:translateY="9.235593496">
+    <path android:name="shallow" android:fillColor="#5DB2D0" android:pathData="M400 246 H854 C907 246 950 289 950 342 V377 C950 410 930 430 900 447 C725 498 550 536 375 549 C335 552 304 533 304 495 V342 C304 289 347 246 400 246 Z"/>
+    <path android:name="middle" android:fillColor="#2876A7" android:pathData="M375 572 C550 563 725 523 900 475 C930 467 950 491 950 528 V624 C950 658 931 681 900 687 C725 726 550 760 375 765 C335 768 304 747 304 716 V623 C304 592 335 574 375 572 Z"/>
+    <path android:name="deep" android:fillColor="#154E81" android:pathData="M375 786 C550 786 725 749 900 714 C930 707 950 734 950 770 V902 C950 955 907 998 854 998 H400 C347 998 304 955 304 902 V838 C304 808 334 787 375 786 Z"/>
+  </group>
+</vector>

@@ -1,0 +1,20 @@
+<resources>
+    <!-- Keep the image behind the first Activity frame; the experiment must not
+         substitute Android's solid-color splash screen for the opening photo. -->
+    <style name="Theme.Unfinished.StartupExperiment" parent="Theme.Unfinished.App">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@style/Theme.Unfinished.StartupExperiment.WindowAnimation</item>
+    </style>
+
+    <!-- Test whether a no-op activity window animation prevents Flyme from
+         scaling the translucent app surface from the launcher icon. -->
+    <style name="Theme.Unfinished.StartupExperiment.WindowAnimation">
+        <item name="android:activityOpenEnterAnimation">@anim/startup_noop</item>
+        <item name="android:activityOpenExitAnimation">@anim/startup_noop</item>
+        <item name="android:taskOpenEnterAnimation">@anim/startup_noop</item>
+        <item name="android:taskToFrontEnterAnimation">@anim/startup_noop</item>
+        <item name="android:windowEnterAnimation">@anim/startup_noop</item>
+    </style>
+</resources>

@@ -1,0 +1,52 @@
+{
+  "status": "PASS: automated audit, not visual/user/device acceptance",
+  "svgXmlParity": true,
+  "htmlLocalLinks": true,
+  "controlledSourceEdit": true,
+  "smallSizePlanes": {
+    "48": {
+      "connectedPlanes": 3,
+      "planeAreaPixels": [
+        293,
+        270,
+        232
+      ]
+    },
+    "64": {
+      "connectedPlanes": 3,
+      "planeAreaPixels": [
+        511,
+        469,
+        401
+      ]
+    }
+  },
+  "dimensions": {
+    "comparison.png": [
+      1240,
+      910
+    ],
+    "desktop-simulation.png": [
+      1170,
+      850
+    ],
+    "icon-1024.png": [
+      1024,
+      1024
+    ],
+    "store-512.png": [
+      512,
+      512
+    ]
+  },
+  "geometry": {
+    "aspectRatio": 0.960000001,
+    "widthReductionFromV1": 0.060000003,
+    "totalHeightReductionFromV1": 0.15885417,
+    "centerGapsDp": [
+      1.8,
+      1.7
+    ],
+    "safeCircleMarginDp": 3.978124962
+  }
+}

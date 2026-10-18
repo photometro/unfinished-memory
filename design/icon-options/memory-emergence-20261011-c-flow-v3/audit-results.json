@@ -1,0 +1,52 @@
+{
+  "status": "PASS: automated audit, not visual/user/device acceptance",
+  "svgXmlParity": true,
+  "htmlLocalLinks": true,
+  "controlledSourceEdit": "Same path count, order, colors, command structure and left/right alignment; height and curve controls deliberately revised",
+  "smallSizePlanes": {
+    "48": {
+      "connectedPlanes": 3,
+      "planeAreaPixels": [
+        333,
+        278,
+        238
+      ]
+    },
+    "64": {
+      "connectedPlanes": 3,
+      "planeAreaPixels": [
+        594,
+        496,
+        415
+      ]
+    }
+  },
+  "dimensions": {
+    "comparison.png": [
+      1240,
+      910
+    ],
+    "desktop-simulation.png": [
+      1170,
+      850
+    ],
+    "icon-1024.png": [
+      1024,
+      1024
+    ],
+    "store-512.png": [
+      512,
+      512
+    ]
+  },
+  "geometry": {
+    "aspectRatio": 0.9,
+    "widthChangeFromV2": 0,
+    "heightChangeFromV2": 0.066666667,
+    "centerGapsDp": [
+      1.9,
+      1.8
+    ],
+    "safeCircleMarginDp": 2.959164352
+  }
+}

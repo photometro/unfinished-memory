@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>未完成 · 四时岸边 14</title>
+<style>
+@font-face{font-family:App;src:url('../../fonts/noto-sans-sc-variable.ttf') format('truetype');font-display:swap}
+*{box-sizing:border-box}body{margin:0;background:#f4f2ed;color:#293e3c;font:15px App,system-ui,sans-serif}main{max-width:1360px;margin:auto;padding:36px 28px 48px}header{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:24px}h1{font-size:28px;font-weight:500;margin:8px 0}p{line-height:1.7;margin:8px 0;color:#687873}.eyebrow{font-size:11px;letter-spacing:.2em}a{color:#456965}label{font-size:13px}select{padding:10px 16px;background:#e8eeea;color:#293e3c;border:1px solid #cad4d0;border-radius:12px;margin-left:8px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}figure{margin:0}figcaption{font-size:14px;margin:0 0 10px;display:flex;justify-content:space-between}figcaption small{color:#75857f}.grid img{width:100%;display:block;border-radius:26px}.note{font-size:12px;margin-top:22px}details{margin-top:24px}summary{cursor:pointer;color:#456965}.history{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:16px}.history img{width:100%;border-radius:20px}footer{font-size:12px;display:flex;gap:22px;margin-top:24px}@media(max-width:740px){header{align-items:start;flex-direction:column}.grid,.history{grid-template-columns:repeat(2,1fr);gap:14px}main{padding:24px 16px}}
+</style></head>
+<body><main><header><div><div class="eyebrow">UNFINISHED / ENVIRONMENT STUDY 14</div><h1>四时的岸边，同一片潮滩。</h1><p>保留母图与旧开屏海面，光照和水位分别变化。</p></div><label>首页潮位<select id="tide"><option value="low">低潮</option><option value="mid" selected>中潮</option><option value="high">高潮</option></select></label></header>
+<section class="grid" aria-label="四时完整首页对照">
+<figure><figcaption>早上<small>暖亮 · 轻冷影</small></figcaption><img data-period="morning" src="morning-mid.jpg" alt="早上中潮完整首页"></figure>
+<figure><figcaption>中午<small>清透 · 清晰岸线</small></figcaption><img data-period="noon" src="noon-mid.jpg" alt="中午中潮完整首页"></figure>
+<figure><figcaption>下午<small>斜暖光 · 柔金</small></figcaption><img data-period="afternoon" src="afternoon-mid.jpg" alt="下午中潮完整首页"></figure>
+<figure><figcaption>晚上<small>冷蓝 · 保留细节</small></figcaption><img data-period="night" src="night-mid.jpg" alt="晚上中潮完整首页"></figure>
+</section><p class="note">实际 Web 原型截图，当前仍为视觉候选。艺术化潮汐并非实测潮位；退潮时会留湿边。截图裁切用于对照，不代替实际容器尺寸、帧率或真机验收。</p>
+<details><summary>对照上一轮 Study 13（历史版本，未通过视觉验收）</summary><div class="history"><img src="../environment-study-13/morning-mid-webgl.jpg" alt="历史早上"><img src="../environment-study-13/noon-mid-webgl.jpg" alt="历史中午"><img src="../environment-study-13/afternoon-mid-webgl.jpg" alt="历史下午"><img src="../environment-study-13/night-mid-webgl.jpg" alt="历史晚上"></div></details>
+<footer><a href="../../?variant=A&period=noon">打开可操作原型</a><a href="four-times-three-tides.json">四时 × 三潮位运行记录</a><a href="intro-states.json">开屏联动记录</a></footer>
+</main><script>document.querySelector('#tide').addEventListener('change',event=>{for(const image of document.querySelectorAll('[data-period]')){image.src=image.dataset.period+'-'+event.target.value+'.jpg';image.alt=image.dataset.period+' '+event.target.value+' 完整首页';}});</script></body></html>

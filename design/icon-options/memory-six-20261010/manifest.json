@@ -1,0 +1,44 @@
+[
+  {
+    "id": "a",
+    "name": "翻开的照片",
+    "source": "<project-root>/design/icon-options/memory-photo-20261010/icon-1024.png",
+    "line": "留下片段 → 照片 → 纸面翻角",
+    "summary": "照片承载瞬间，翻角表达重新打开。"
+  },
+  {
+    "id": "b",
+    "name": "记忆册",
+    "source": "<local-generated-images>/exec-385deb9a-0245-4a92-a83c-3191adca90ab.png",
+    "line": "记录与回看 → 册子 → 纸页层叠",
+    "summary": "强调私人记录与回看，纸页中保留海岸。"
+  },
+  {
+    "id": "c",
+    "name": "漂流瓶",
+    "source": "<local-generated-images>/exec-f6903bec-2bd8-4fd1-9645-51c36935a0a2.png",
+    "line": "封存与再遇见 → 瓶中纸片 → 半透明玻璃",
+    "summary": "突出保留、漂泊与未来的遇见。"
+  },
+  {
+    "id": "d",
+    "name": "错位照片",
+    "source": "<local-generated-images>/exec-1587e0d0-3fb7-485a-93b8-5fa08bbc7192.png",
+    "line": "保存瞬间 → 照片 → 局部错位",
+    "summary": "拆开一个角，让画面未完全闭合。"
+  },
+  {
+    "id": "e",
+    "name": "潮页记忆册",
+    "source": "<local-generated-images>/exec-0310d93e-5d40-474e-82c8-51d153fd6bc1.png",
+    "line": "重读过去 → 册子 → 双页错位",
+    "summary": "纸页化成色面，用海岸线连接两页。"
+  },
+  {
+    "id": "f",
+    "name": "洋流记忆瓶",
+    "source": "<local-generated-images>/exec-fc12293e-d3de-453c-9679-aeca65887be6.png",
+    "line": "封存与漂泊 → 瓶中纸片 → 洋流拆分",
+    "summary": "瓶身拆成深浅两股流面，纸片仍被保留。"
+  }
+]

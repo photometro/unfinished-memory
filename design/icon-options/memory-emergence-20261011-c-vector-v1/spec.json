@@ -1,0 +1,22 @@
+{
+  "name": "未完成 · C 存片 / vector v1",
+  "status": "candidate-not-installed",
+  "reference": "<project-root>/design/icon-options/memory-emergence-20261011-c-gap-v5/c-concept.png",
+  "background": "#FEFEFB",
+  "colors": ["#5DB2D0", "#2876A7", "#154E81"],
+  "monochrome": "#173E57",
+  "sourceViewport": 1254,
+  "sourceCenter": [627, 622],
+  "adaptiveViewportDp": 108,
+  "visibleViewportDp": 72,
+  "safeCircleDiameterDp": 66,
+  "safeCircleInsetDp": 0.15,
+  "normalization": "uniform scale; preserve shape and gaps; fit the entire mark inside the central 66dp circle",
+  "constraints": [
+    "Keep three aligned planes and two curved gaps",
+    "Do not stretch the selected silhouette",
+    "No text, new symbol, texture, gradient, material, baked outer mask or shadow",
+    "Use identical path data for color and monochrome exports",
+    "Only export candidate resources; do not edit the application manifest or active launcher resources"
+  ]
+}

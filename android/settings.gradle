@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = 'unfinished-android'
-include ':app'
+include ':app', ':macrobenchmark'

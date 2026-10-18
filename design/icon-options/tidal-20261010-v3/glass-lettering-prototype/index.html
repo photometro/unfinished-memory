@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2f0e9">
+  <title>未完成 · 液态玻璃字小样</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f2f0e9;
+      --ink: #293e41;
+      --muted: #788a88;
+      --sea: #315c60;
+      --line: rgba(45, 72, 71, .12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100svh;
+      color: var(--ink);
+      background: radial-gradient(ellipse at 50% -18%, #fff 0, transparent 60%), var(--paper);
+      font-family: "Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .page { width: min(1000px, calc(100% - 36px)); margin: auto; padding: clamp(30px, 6vw, 64px) 0 116px; }
+    .heading { margin: 0 auto 30px; text-align: center; }
+    .eyebrow { margin: 0 0 13px; color: #81908a; font: 650 10px/1.3 ui-sans-serif, system-ui, sans-serif; letter-spacing: .2em; }
+    h1 { margin: 0; font-size: clamp(25px, 4vw, 36px); line-height: 1.25; font-weight: 650; letter-spacing: .025em; }
+    .intro { max-width: 600px; margin: 12px auto 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
+    .showcase {
+      display: grid;
+      grid-template-columns: minmax(280px, 1.05fr) minmax(270px, .95fr);
+      align-items: center;
+      gap: clamp(26px, 6vw, 72px);
+      width: min(880px, 100%);
+      margin: auto;
+      padding: clamp(18px, 4vw, 40px);
+      border: 1px solid rgba(53, 82, 79, .09);
+      border-radius: 28px;
+      background: rgba(255,255,255,.54);
+      box-shadow: 0 20px 64px rgba(39, 61, 56, .08), inset 0 1px rgba(255,255,255,.88);
+      backdrop-filter: blur(12px);
+    }
+    .art-column { display: grid; justify-items: center; gap: 14px; }
+    .icon-frame {
+      width: min(100%, 430px);
+      aspect-ratio: 1;
+      overflow: hidden;
+      border-radius: 28%;
+      background: #c9d9d7;
+      box-shadow: 0 20px 40px rgba(37, 67, 71, .19), 0 3px 8px rgba(37, 67, 71, .12);
+    }
+    .icon-art { display: block; width: 100%; height: 100%; }
+    .art-note { margin: 0; color: #87928a; font-size: 10px; letter-spacing: .1em; }
+    .details { min-width: 0; }
+    .option-id { display: inline-flex; align-items: center; gap: 8px; color: #718680; font: 650 10px/1.3 ui-sans-serif, system-ui, sans-serif; letter-spacing: .15em; }
+    .option-id::before { content: ""; width: 17px; height: 1px; background: #9aada4; }
+    h2 { margin: 14px 0 9px; font-size: clamp(23px, 3vw, 30px); line-height: 1.3; font-weight: 630; letter-spacing: .02em; }
+    .description { min-height: 3.7em; max-width: 32em; margin: 0; color: #687b7b; font-size: 13px; line-height: 1.85; }
+    .notes { display: grid; gap: 0; margin: 20px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+    .notes li { display: grid; grid-template-columns: 68px 1fr; gap: 10px; padding: 12px 0; border-bottom: 1px solid var(--line); color: #71817e; font-size: 11px; line-height: 1.65; }
+    .notes strong { color: #456164; font-weight: 630; }
+    .mini-check { display: flex; align-items: center; gap: 13px; margin-top: 20px; color: #72827e; font-size: 10px; line-height: 1.65; letter-spacing: .04em; }
+    .mini-frame { width: 60px; height: 60px; flex: 0 0 auto; overflow: hidden; border-radius: 17px; box-shadow: 0 5px 13px rgba(35, 62, 65, .17); }
+    .comparison { display: flex; justify-content: center; gap: 12px; margin: 21px auto 0; }
+    .choice {
+      display: flex; align-items: center; gap: 9px; padding: 7px 11px 7px 7px;
+      border: 1px solid transparent; border-radius: 16px; color: #75837f; background: transparent;
+      font: inherit; cursor: pointer; transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+    .choice:hover { transform: translateY(-2px); }
+    .choice[aria-pressed="true"] { color: #385659; border-color: rgba(57, 90, 88, .16); background: rgba(255,255,255,.62); }
+    .thumb { width: 44px; height: 44px; flex: 0 0 auto; overflow: hidden; border-radius: 12px; box-shadow: 0 3px 8px rgba(36, 60, 62, .14); }
+    .choice-copy { display: grid; gap: 3px; text-align: left; }
+    .choice-copy strong { font-size: 11px; font-weight: 650; }
+    .choice-copy small { color: #8a9691; font-size: 9px; }
+    .disclaimer { margin: 20px auto 0; color: #9a9d91; text-align: center; font-size: 10px; line-height: 1.6; }
+    .switcher {
+      position: fixed; z-index: 5; left: 50%; bottom: max(16px, env(safe-area-inset-bottom));
+      display: grid; grid-template-columns: 46px minmax(170px, 225px) 46px; align-items: center;
+      min-height: 53px; padding: 5px; transform: translateX(-50%); border: 1px solid rgba(255,255,255,.24);
+      border-radius: 999px; color: #f6f5ee; background: rgba(43, 74, 72, .94);
+      box-shadow: 0 9px 30px rgba(28, 48, 48, .24), inset 0 1px rgba(255,255,255,.16); backdrop-filter: blur(16px);
+    }
+    .switcher button { display: grid; place-items: center; width: 42px; height: 41px; border: 0; border-radius: 50%; color: inherit; background: transparent; font: 400 24px/1 ui-sans-serif, system-ui, sans-serif; cursor: pointer; }
+    .switcher button:hover { background: rgba(255,255,255,.14); }
+    .switch-label { overflow: hidden; text-align: center; text-overflow: ellipsis; white-space: nowrap; font-size: 11px; font-weight: 620; letter-spacing: .04em; }
+
+    /* These are clear lenses, not translucent text fills: the original photo is locally displaced inside each glyph. */
+    .icon-art .effect-a, .icon-art .effect-b { display: none; }
+    .icon-art.variant-a .effect-a, .icon-art.variant-b .effect-b { display: inline; }
+    .word-group text { font-family: "Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans SC", sans-serif; font-size: 250px; font-weight: 760; letter-spacing: -11px; text-anchor: middle; stroke-linejoin: round; }
+    .word-group { transform: rotate(5deg); transform-box: view-box; transform-origin: 50% 42.3%; }
+    .liquid-shadow { fill: #173d48; opacity: .16; }
+    .liquid-rim-dark { fill: none; stroke: rgba(21, 62, 75, .28); stroke-width: 9px; stroke-linejoin: round; paint-order: stroke fill; }
+    .liquid-rim-light { fill: none; stroke: rgba(252, 255, 250, .76); stroke-width: 4px; stroke-linejoin: round; }
+    .liquid-glint { fill: none; stroke: rgba(249, 255, 255, .27); stroke-width: 7px; stroke-linecap: round; }
+    .effect-b .liquid-rim-dark { stroke: rgba(18, 63, 78, .34); stroke-width: 11px; }
+    .effect-b .liquid-rim-light { stroke: rgba(255,255,255,.92); stroke-width: 5px; }
+    .effect-b .liquid-glint { stroke: rgba(255,255,255,.42); stroke-width: 9px; }
+    @media (max-width: 720px) {
+      .page { width: min(100% - 26px, 520px); padding-top: 28px; }
+      .heading { margin-bottom: 21px; }
+      .showcase { grid-template-columns: 1fr; gap: 24px; padding: 17px; border-radius: 24px; }
+      .icon-frame { width: min(100%, 390px); }
+      .details { width: min(100%, 390px); margin: auto; }
+      .notes { margin-top: 15px; }
+      .comparison { gap: 3px; }
+      .choice { gap: 7px; padding-right: 8px; }
+      .thumb { width: 40px; height: 40px; }
+    }
+    @media (max-width: 390px) {
+      .choice-copy small { display: none; }
+      .switcher { grid-template-columns: 42px minmax(145px, 190px) 42px; }
+      .switcher button { width: 38px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <header class="heading page">
+    <p class="eyebrow">UNFINISHED · ICON STUDY 03</p>
+    <h1>让名字透过潮线抵岸</h1>
+    <p class="intro">这次不把字涂成“玻璃色”：海岸原图会透过字形，并在字内轻微折射。只比较两种液态玻璃的光学强度。</p>
+  </header>
+  <main class="page" style="padding-top:0">
+    <section class="showcase" aria-live="polite">
+      <div class="art-column">
+        <div class="icon-frame" id="mainArt" role="img" aria-label="液态玻璃字应用图标预览"></div>
+        <p class="art-note">LAUNCHER ICON · 海岸底图保持原样</p>
+      </div>
+      <div class="details">
+        <span class="option-id" id="optionId">A · 01 / 02</span>
+        <h2 id="optionTitle">浅潮折射</h2>
+        <p class="description" id="optionDescription">“未完成”作为一个连贯字组贴近潮线。海水和沙纹透过字面，只轻轻弯折；边缘有薄薄的湿润亮线。</p>
+        <ul class="notes">
+          <li><strong>字形内部</strong><span>看得到原始海岸纹理，只在字内出现局部折射。</span></li>
+          <li><strong>玻璃边缘</strong><span>细亮边与淡暗边提示厚度，不用粗描边或立体挤出。</span></li>
+          <li><strong>整体排布</strong><span>三个字保持成词可读，轻微顺着潮线，不散落、不做标签牌。</span></li>
+        </ul>
+        <div class="mini-check"><div class="mini-frame" id="miniArt" aria-hidden="true"></div><span>缩至约 56 px<br>检查字组仍能辨认</span></div>
+      </div>
+    </section>
+    <nav class="comparison" aria-label="选择液态玻璃字方案">
+      <button class="choice" data-variant="A" aria-pressed="true" type="button"><span class="thumb" id="thumbA" aria-hidden="true"></span><span class="choice-copy"><strong>A · 浅潮折射</strong><small>轻微弯折 · 更克制</small></span></button>
+      <button class="choice" data-variant="B" aria-pressed="false" type="button"><span class="thumb" id="thumbB" aria-hidden="true"></span><span class="choice-copy"><strong>B · 潮光透镜</strong><small>更明显折光 · 仍透明</small></span></button>
+    </nav>
+    <p class="disclaimer">独立设计小样 · 不会改动已定版图标或 Android 工程</p>
+  </main>
+  <div class="switcher" aria-label="方案切换"><button type="button" id="prev" aria-label="上一个方案">‹</button><span class="switch-label" id="switchLabel">A · 浅潮折射</span><button type="button" id="next" aria-label="下一个方案">›</button></div>
+
+  <script>
+    (() => {
+      const base = "./base.png";
+      const copy = {
+        A: { id: "A · 01 / 02", title: "浅潮折射", label: "A · 浅潮折射", description: "“未完成”作为一个连贯字组贴近潮线。海水和沙纹透过字面，只轻轻弯折；边缘有薄薄的湿润亮线。" },
+        B: { id: "B · 02 / 02", title: "潮光透镜", label: "B · 潮光透镜", description: "仍然能看见原图，但折射范围更明显，海水纹理在字内产生更清楚的偏移；边缘多一丝冷色分光，像刚被潮水润过。" }
+      };
+      function art(id, initial) {
+        const mask = `${id}-mask`, filterA = `${id}-bend-a`, filterB = `${id}-bend-b`, shadow = `${id}-shadow`, glow = `${id}-glow`, tintA = `${id}-tint-a`, tintB = `${id}-tint-b`;
+        const overlay = (variant, filter, tint, shift) => `
+          <g class="effect-${variant.toLowerCase()}">
+            <image href="${base}" width="1254" height="1254" preserveAspectRatio="none" filter="url(#${filter})" mask="url(#${mask})" />
+            ${shift ? `<image href="${base}" x="3" y="-1" width="1254" height="1254" preserveAspectRatio="none" filter="url(#${filter})" mask="url(#${mask})" opacity=".14" />` : ""}
+            <rect width="1254" height="1254" fill="url(#${tint})" mask="url(#${mask})" />
+            <path class="liquid-glint" d="M260 397 C370 365 445 414 548 386 S743 402 843 376 S960 387 1013 366" mask="url(#${mask})" filter="url(#${glow})" />
+            <g class="word-group">
+              <text class="liquid-shadow" x="627" y="516" filter="url(#${shadow})">未完成</text>
+              <text class="liquid-rim-dark" x="627" y="510">未完成</text>
+              <text class="liquid-rim-light" x="627" y="510">未完成</text>
+              ${variant === "B" ? `<text class="liquid-rim-light" x="624" y="507" opacity=".3">未完成</text>` : ""}
+            </g>
+          </g>`;
+        return `<svg class="icon-art variant-${initial.toLowerCase()}" viewBox="0 0 1254 1254" role="img" aria-label="${copy[initial].label}">
+          <defs>
+            <mask id="${mask}" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" x="0" y="0" width="1254" height="1254">
+              <rect width="1254" height="1254" fill="black" />
+              <g class="word-group" fill="white"><text class="word-mask" x="627" y="510">未完成</text></g>
+            </mask>
+            <filter id="${filterA}" x="0" y="0" width="1254" height="1254" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feTurbulence type="fractalNoise" baseFrequency=".006 .011" numOctaves="1" seed="12" result="ripple" />
+              <feDisplacementMap in="SourceGraphic" in2="ripple" scale="18" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+            <filter id="${filterB}" x="0" y="0" width="1254" height="1254" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feTurbulence type="fractalNoise" baseFrequency=".004 .009" numOctaves="2" seed="4" result="ripple" />
+              <feDisplacementMap in="SourceGraphic" in2="ripple" scale="34" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+            <filter id="${shadow}" x="-25%" y="-25%" width="150%" height="160%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="4" /></filter>
+            <filter id="${glow}" x="-20%" y="-30%" width="140%" height="160%"><feGaussianBlur stdDeviation="3" /></filter>
+            <linearGradient id="${tintA}" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e7f8ef" stop-opacity=".07"/><stop offset=".54" stop-color="#a9dce1" stop-opacity=".10"/><stop offset="1" stop-color="#d4eee5" stop-opacity=".08"/></linearGradient>
+            <linearGradient id="${tintB}" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e9ffff" stop-opacity=".08"/><stop offset=".5" stop-color="#74c9db" stop-opacity=".12"/><stop offset="1" stop-color="#f7fff0" stop-opacity=".10"/></linearGradient>
+          </defs>
+          <image href="${base}" width="1254" height="1254" preserveAspectRatio="xMidYMid slice" />
+          ${overlay("A", filterA, tintA, false)}
+          ${overlay("B", filterB, tintB, true)}
+        </svg>`;
+      }
+      const main = document.getElementById("mainArt"), mini = document.getElementById("miniArt");
+      const title = document.getElementById("optionTitle"), description = document.getElementById("optionDescription"), optionId = document.getElementById("optionId"), switchLabel = document.getElementById("switchLabel");
+      const choices = [...document.querySelectorAll(".choice")];
+      document.getElementById("thumbA").innerHTML = art("thumbA", "A");
+      document.getElementById("thumbB").innerHTML = art("thumbB", "B");
+      let current = new URLSearchParams(location.search).get("variant") === "B" ? "B" : "A";
+      function select(variant) {
+        current = variant;
+        const data = copy[variant];
+        main.innerHTML = art("main", variant);
+        mini.innerHTML = art("mini", variant);
+        title.textContent = data.title;
+        description.textContent = data.description;
+        optionId.textContent = data.id;
+        switchLabel.textContent = data.label;
+        choices.forEach(button => button.setAttribute("aria-pressed", String(button.dataset.variant === variant)));
+        try { history.replaceState(null, "", `?variant=${variant}`); } catch (_) { /* in-file preview can switch without changing its address */ }
+      }
+      const variants = ["A", "B"];
+      function step(delta) { select(variants[(variants.indexOf(current) + delta + variants.length) % variants.length]); }
+      document.getElementById("prev").addEventListener("click", () => step(-1));
+      document.getElementById("next").addEventListener("click", () => step(1));
+      choices.forEach(button => button.addEventListener("click", () => select(button.dataset.variant)));
+      window.addEventListener("keydown", event => {
+        if (event.target.matches("input, textarea, [contenteditable='true']")) return;
+        if (event.key === "ArrowLeft") step(-1);
+        if (event.key === "ArrowRight") step(1);
+      });
+      select(current);
+    })();
+  </script>
+</body>
+</html>

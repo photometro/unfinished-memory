@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.Unfinished.App" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/opening_startup_background</item>
+    </style>
+
+    <style name="Theme.Unfinished" parent="Theme.Unfinished.App" />
+
+</resources>

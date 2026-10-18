@@ -1,0 +1,23 @@
+{
+  "run": "UI-20261005-8-05",
+  "revision": "R4",
+  "candidate": "Study 15",
+  "scope": "Web prototype only; user visual acceptance pending",
+  "states": ["morning", "afternoon", "night"],
+  "home": {"renderer": "photo", "tide": "0.0000", "tidePaused": "true", "animationActive": "false", "canvases": 0, "photographFilter": "none", "legacyTideUrl": "high"},
+  "introObserved": [
+    {"state": "night", "method": "normal replay", "seaOpacitySample": "0.9934", "endpoint": "shore"},
+    {"state": "morning", "method": "skip", "endpoint": "shore", "seaLayerRemaining": false},
+    {"state": "afternoon", "method": "reduce mid-entry", "endpoint": "shore", "seaLayerRemaining": false}
+  ],
+  "clockPreview": ["05:59:58 to morning", "13:59:58 to afternoon", "17:59:58 to night"],
+  "dark": {"on": "night / 手动深色", "off": "morning / 当地时间自动", "route": "settings"},
+  "layoutsCss": [
+    {"requested": "320x568", "observedWidth": 319.98931884765625, "observedHeight": 567.9904174804688, "text": "large", "safeArea": "simulated 44/34", "homeActionsContained": true},
+    {"requested": "390x844", "observedWidth": 389.9920043945313, "observedHeight": 843.9898681640625, "variant": "B", "photoRotation": -90},
+    {"requested": "768x1024", "observedWidth": 767.9904174804688, "observedHeight": 1023.9871826171876}
+  ],
+  "flow": {"fictionalTextRetained": true, "failedCommitRecords": 3, "retryRecords": 4, "phase": "complete", "currentCanvases": 1},
+  "tests": {"passed": 55, "failed": 0, "paperSamples": 40040, "currentScript": "pass", "build": "pass with existing directive warnings", "browserFinalWarningsErrors": []},
+  "limitations": ["No user visual acceptance", "No real browser network-failure or slow-decode injection", "No full font/keyboard/device matrix", "No background/timezone jump exercise", "No Android or runtime memory/frame-time measurement", "Screenshot dimensions are not CSS viewport evidence"]
+}

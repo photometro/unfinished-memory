@@ -1,0 +1,18 @@
+<resources>
+    <!-- Debug opens directly onto the sea image, with the accepted launcher
+         icon-to-window transition. Release continues to use Theme.Unfinished. -->
+    <style name="Theme.Unfinished.StartupExperiment" parent="Theme.Unfinished.App">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@style/Theme.Unfinished.StartupExperiment.WindowAnimation</item>
+    </style>
+
+    <style name="Theme.Unfinished.StartupExperiment.WindowAnimation">
+        <item name="android:activityOpenEnterAnimation">@anim/startup_noop</item>
+        <item name="android:activityOpenExitAnimation">@anim/startup_noop</item>
+        <item name="android:taskOpenEnterAnimation">@anim/startup_noop</item>
+        <item name="android:taskToFrontEnterAnimation">@anim/startup_noop</item>
+        <item name="android:windowEnterAnimation">@anim/startup_noop</item>
+    </style>
+</resources>

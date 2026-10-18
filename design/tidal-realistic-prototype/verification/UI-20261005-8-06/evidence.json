@@ -1,0 +1,521 @@
+{
+  "home": [
+    {
+      "app": {
+        "lightSource": "设计预览",
+        "period": "afternoon",
+        "previewSize": "elastic",
+        "reduced": "false",
+        "route": "home",
+        "safePreview": "false",
+        "scene": "quiet",
+        "space": "shore",
+        "stage": "shore",
+        "textScale": "normal"
+      },
+      "bounds": {
+        "height": 931.9962768554688,
+        "width": 419.98931884765625
+      },
+      "filter": "none",
+      "openingCanvas": 0,
+      "surface": {
+        "animationActive": "false",
+        "lightSettled": "true",
+        "mapping": "{\"x\":[0.899257616984111,0,0.0503711915079445],\"y\":[0,1,0],\"scale\":0.5243975479143179}",
+        "openingSeaReady": "true",
+        "period": "afternoon",
+        "renderer": "photo",
+        "shoreMaster": "user-daylight-calm-v2",
+        "shownPeriod": "afternoon",
+        "surfaceStudy": "16",
+        "tide": "0.0000",
+        "tidePaused": "true"
+      },
+      "veil": "none"
+    },
+    {
+      "app": {
+        "lightSource": "设计预览",
+        "period": "night",
+        "previewSize": "elastic",
+        "reduced": "false",
+        "route": "home",
+        "safePreview": "false",
+        "scene": "quiet",
+        "space": "shore",
+        "stage": "shore",
+        "textScale": "normal"
+      },
+      "bounds": {
+        "height": 931.9962768554688,
+        "width": 419.98931884765625
+      },
+      "filter": "none",
+      "openingCanvas": 0,
+      "surface": {
+        "animationActive": "false",
+        "lightSettled": "true",
+        "mapping": "{\"x\":[0.899257616984111,0,0.0503711915079445],\"y\":[0,1,0],\"scale\":0.5243975479143179}",
+        "openingSeaReady": "true",
+        "period": "night",
+        "renderer": "photo",
+        "shoreMaster": "user-daylight-calm-v2",
+        "shownPeriod": "night",
+        "surfaceStudy": "16",
+        "tide": "0.0000",
+        "tidePaused": "true"
+      },
+      "veil": "none"
+    },
+    {
+      "app": {
+        "lightSource": "设计预览",
+        "period": "morning",
+        "previewSize": "elastic",
+        "reduced": "false",
+        "route": "home",
+        "safePreview": "false",
+        "scene": "quiet",
+        "space": "shore",
+        "stage": "shore",
+        "textScale": "normal"
+      },
+      "bounds": {
+        "height": 931.9962768554688,
+        "width": 419.98931884765625
+      },
+      "filter": "none",
+      "openingCanvas": 0,
+      "surface": {
+        "animationActive": "false",
+        "lightSettled": "true",
+        "mapping": "{\"x\":[0.899257616984111,0,0.0503711915079445],\"y\":[0,1,0],\"scale\":0.5243975479143179}",
+        "openingSeaReady": "true",
+        "period": "morning",
+        "renderer": "photo",
+        "shoreMaster": "user-daylight-calm-v2",
+        "shownPeriod": "morning",
+        "surfaceStudy": "16",
+        "tide": "0.0000",
+        "tidePaused": "true"
+      },
+      "veil": "none"
+    }
+  ],
+  "veils": [
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "period": "morning",
+      "scene": "quiet",
+      "variant": "app-window variant-A",
+      "veil": "none"
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "period": "night",
+      "scene": "quiet",
+      "variant": "app-window variant-A night",
+      "veil": "none"
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "period": "morning",
+      "scene": "encounter",
+      "variant": "app-window variant-A",
+      "veil": "none"
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "period": "night",
+      "scene": "encounter",
+      "variant": "app-window variant-A night",
+      "veil": "none"
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "period": "morning",
+      "scene": "quiet",
+      "variant": "app-window variant-B",
+      "veil": "none"
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "period": "night",
+      "scene": "quiet",
+      "variant": "app-window variant-B night",
+      "veil": "none"
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "period": "morning",
+      "scene": "encounter",
+      "variant": "app-window variant-B",
+      "veil": "none"
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "period": "night",
+      "scene": "encounter",
+      "variant": "app-window variant-B night",
+      "veil": "none"
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "period": "morning",
+      "scene": "quiet",
+      "variant": "app-window variant-C",
+      "veil": "none"
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "period": "night",
+      "scene": "quiet",
+      "variant": "app-window variant-C night",
+      "veil": "none"
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "period": "morning",
+      "scene": "encounter",
+      "variant": "app-window variant-C",
+      "veil": "none"
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "period": "night",
+      "scene": "encounter",
+      "variant": "app-window variant-C night",
+      "veil": "none"
+    }
+  ],
+  "sizes": [
+    {
+      "app": [
+        319.98931884765625,
+        567.9904174804688
+      ],
+      "covers": true,
+      "filter": "none",
+      "photo": [
+        318.270263671875,
+        636.5538330078125
+      ],
+      "size": "320x568",
+      "surface": [
+        318.2835693359375,
+        566.28466796875
+      ]
+    },
+    {
+      "app": [
+        389.9920043945313,
+        843.9898681640625
+      ],
+      "covers": true,
+      "filter": "none",
+      "photo": [
+        421.1353759765625,
+        842.270751953125
+      ],
+      "size": "390x844",
+      "surface": [
+        388.2862548828125,
+        842.2841186523438
+      ]
+    },
+    {
+      "app": [
+        767.9904174804688,
+        1023.9871826171876
+      ],
+      "covers": true,
+      "filter": "none",
+      "photo": [
+        766.2713012695312,
+        1532.555908203125
+      ],
+      "size": "768x1024",
+      "surface": [
+        766.2846069335938,
+        1022.2814331054688
+      ]
+    },
+    {
+      "actions": [
+        {
+          "h": 43.989871978759766,
+          "inside": true,
+          "name": "打开设置"
+        },
+        {
+          "h": 47.98773956298828,
+          "inside": true,
+          "name": "留下一段"
+        },
+        {
+          "h": 45.98880386352539,
+          "inside": true,
+          "name": "过去"
+        }
+      ],
+      "safe": "true",
+      "size": "320x568",
+      "text": "large"
+    }
+  ],
+  "responsive": [
+    {
+      "app": [
+        582.5159912109375,
+        1259.701416015625
+      ],
+      "covers": true,
+      "photo": [
+        629.83740234375,
+        1259.6748046875
+      ],
+      "surface": [
+        582.5159912109375,
+        1259.701416015625
+      ],
+      "viewport": [
+        582,
+        1260
+      ]
+    },
+    {
+      "app": [
+        477.6119384765625,
+        847.7611694335938
+      ],
+      "covers": true,
+      "photo": [
+        477.5986022949219,
+        955.2105102539062
+      ],
+      "surface": [
+        477.6119384765625,
+        847.7611694335938
+      ],
+      "viewport": [
+        478,
+        848
+      ]
+    },
+    {
+      "app": [
+        1146.2686767578125,
+        1528.358154296875
+      ],
+      "covers": true,
+      "photo": [
+        1146.25537109375,
+        2292.52392578125
+      ],
+      "surface": [
+        1146.2686767578125,
+        1528.358154296875
+      ],
+      "viewport": [
+        1146,
+        1528
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "mid": {
+        "opacity": "1",
+        "period": "morning",
+        "stage": "ebb",
+        "water": {
+          "coverage": "0.6861",
+          "homeTide": "paused",
+          "progress": "0.5631",
+          "reveal": "channel-distance-mask"
+        }
+      },
+      "end": {
+        "canvas": 0,
+        "stage": "shore",
+        "surface": {
+          "animationActive": "false",
+          "lightSettled": "true",
+          "mapping": "{\"x\":[0.899257616984111,0,0.0503711915079445],\"y\":[0,1,0],\"scale\":0.5243975479143179}",
+          "openingSeaReady": "true",
+          "period": "morning",
+          "renderer": "photo",
+          "shoreMaster": "user-daylight-calm-v2",
+          "shownPeriod": "morning",
+          "surfaceStudy": "16",
+          "tide": "0.0000",
+          "tidePaused": "true"
+        }
+      }
+    },
+    {
+      "mid": {
+        "opacity": "1",
+        "period": "afternoon",
+        "stage": "ebb",
+        "water": {
+          "coverage": "0.6764",
+          "homeTide": "paused",
+          "progress": "0.5349",
+          "reveal": "channel-distance-mask"
+        }
+      },
+      "end": {
+        "canvas": 0,
+        "stage": "shore",
+        "surface": {
+          "animationActive": "false",
+          "lightSettled": "true",
+          "mapping": "{\"x\":[0.899257616984111,0,0.0503711915079445],\"y\":[0,1,0],\"scale\":0.5243975479143179}",
+          "openingSeaReady": "true",
+          "period": "afternoon",
+          "renderer": "photo",
+          "shoreMaster": "user-daylight-calm-v2",
+          "shownPeriod": "afternoon",
+          "surfaceStudy": "16",
+          "tide": "0.0000",
+          "tidePaused": "true"
+        }
+      }
+    },
+    {
+      "mid": {
+        "opacity": "1",
+        "period": "night",
+        "stage": "ebb",
+        "water": {
+          "coverage": "0.6919",
+          "homeTide": "paused",
+          "progress": "0.5798",
+          "reveal": "channel-distance-mask"
+        }
+      },
+      "end": {
+        "canvas": 0,
+        "stage": "shore",
+        "surface": {
+          "animationActive": "false",
+          "lightSettled": "true",
+          "mapping": "{\"x\":[0.899257616984111,0,0.0503711915079445],\"y\":[0,1,0],\"scale\":0.5243975479143179}",
+          "openingSeaReady": "true",
+          "period": "night",
+          "renderer": "photo",
+          "shoreMaster": "user-daylight-calm-v2",
+          "shownPeriod": "night",
+          "surfaceStudy": "16",
+          "tide": "0.0000",
+          "tidePaused": "true"
+        }
+      }
+    },
+    {
+      "canvas": 0,
+      "kind": "skip",
+      "stage": "shore"
+    },
+    {
+      "app": {
+        "lightSource": "设计预览",
+        "period": "night",
+        "previewSize": "elastic",
+        "reduced": "true",
+        "route": "home",
+        "safePreview": "false",
+        "scene": "quiet",
+        "space": "shore",
+        "stage": "shore",
+        "textScale": "normal"
+      },
+      "canvas": 0,
+      "kind": "reduced"
+    }
+  ],
+  "dark": [
+    {
+      "app": {
+        "lightSource": "手动深色",
+        "period": "night",
+        "previewSize": "elastic",
+        "reduced": "false",
+        "route": "settings",
+        "safePreview": "false",
+        "scene": "quiet",
+        "space": "focus",
+        "stage": "shore",
+        "textScale": "normal"
+      },
+      "surface": {
+        "animationActive": "false",
+        "lightSettled": "true",
+        "mapping": "{\"x\":[0.899257616984111,0,0.0503711915079445],\"y\":[0,1,0],\"scale\":0.5243975479143179}",
+        "openingSeaReady": "true",
+        "period": "night",
+        "renderer": "photo",
+        "shoreMaster": "user-daylight-calm-v2",
+        "shownPeriod": "night",
+        "surfaceStudy": "16",
+        "tide": "0.0000",
+        "tidePaused": "true"
+      }
+    },
+    {
+      "app": {
+        "lightSource": "当地时间自动",
+        "period": "night",
+        "previewSize": "elastic",
+        "reduced": "false",
+        "route": "settings",
+        "safePreview": "false",
+        "scene": "quiet",
+        "space": "focus",
+        "stage": "shore",
+        "textScale": "normal"
+      },
+      "canvas": 0
+    }
+  ],
+  "draft": {
+    "openingCanvas": 0,
+    "period": "afternoon",
+    "route": "review",
+    "text": "收好这一段01写下02留线索03怎样回来04收好剩下的，交给时间。检查刚才留下的内容。需要调整时，返回上一步。刚才写下的展开原文最终回归示例：同一段内容，随平静水面一起交给时间。以后怎样出现偶然遇见允许它在未来某个时刻主动回来。线索那时的一个普通片刻。来源现在留下回忆偏好沿用全局设置只有确认才会封存 · 仍可在「过去」主动查看确认封存 · 演示原型预览 · 刷新后清空"
+  },
+  "seal": {
+    "allCanvases": [
+      {
+        "classes": "",
+        "data": {}
+      }
+    ],
+    "app": {
+      "lightSource": "设计预览",
+      "period": "afternoon",
+      "previewSize": "elastic",
+      "reduced": "false",
+      "route": "seal",
+      "safePreview": "false",
+      "scene": "quiet",
+      "space": "ritual",
+      "stage": "shore",
+      "textScale": "normal"
+    },
+    "currentCanvases": 0,
+    "journey": {
+      "carrier": "paper-boat",
+      "phase": "complete"
+    },
+    "status": "页面：交给时间 · 光照：斜阳记录：4 条演示 · 当前会话：无回忆快照：0 · 可见线索：0载体：demo-memory-1791195677771 · 仅内存"
+  },
+  "currentSelectorCorrection": {
+    "incorrectSelector": ".current-map canvas",
+    "actualParent": ".current-field",
+    "verifiedCount": 1,
+    "completionPeriodSwitch": "night stays phase=complete, one .seal-journey canvas"
+  }
+}

@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>未完成 · 潮岸文字图标小样</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #263b3e;
+      --muted: #718184;
+      --paper: #f3f1eb;
+      --line: rgba(46, 69, 71, .12);
+      font-family: "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: clamp(24px, 5vw, 64px);
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at 15% 0%, rgba(255,255,255,.82), transparent 38%),
+        var(--paper);
+    }
+
+    main { width: min(100%, 1100px); margin: 0 auto; }
+
+    header { margin: 0 0 30px; }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Noto Serif CJK SC", "Songti SC", "SimSun", serif;
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 500;
+      letter-spacing: .04em;
+    }
+
+    .intro {
+      max-width: 670px;
+      margin: 12px 0 0;
+      color: #637578;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .candidates {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(16px, 3vw, 28px);
+    }
+
+    article {
+      min-width: 0;
+      padding: clamp(14px, 2vw, 22px);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255,255,255,.52);
+      box-shadow: 0 16px 42px rgba(38,59,62,.055);
+    }
+
+    .art-label {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 0 0 14px;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: "Noto Serif CJK SC", "Songti SC", "SimSun", serif;
+      font-size: 19px;
+      font-weight: 600;
+    }
+
+    .letter { color: #8e9a97; font-size: 11px; letter-spacing: .12em; }
+
+    .icon {
+      position: relative;
+      width: min(100%, 420px);
+      aspect-ratio: 1;
+      margin: 0 auto;
+      overflow: hidden;
+      isolation: isolate;
+      border-radius: 29%;
+      background: #d7e0dc;
+      box-shadow: 0 12px 28px rgba(28,51,57,.16);
+    }
+
+    .icon > img, .icon > svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .icon > img { object-fit: cover; }
+
+    .icon svg { overflow: visible; pointer-events: none; }
+
+    .icon text {
+      text-anchor: middle;
+      dominant-baseline: central;
+      font-family: "Noto Serif CJK SC", "Songti SC", "SimSun", "Microsoft YaHei", serif;
+      font-size: 280px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .sand-shadow { fill: #2c4852; opacity: .62; filter: blur(3px); }
+
+    .sand-highlight {
+      fill: none;
+      stroke: #fff6e1;
+      stroke-width: 8px;
+      stroke-linejoin: round;
+      opacity: .72;
+    }
+
+    .sand-face {
+      fill: #748078;
+      stroke: #5c6d6b;
+      stroke-width: 2px;
+      paint-order: stroke fill;
+      opacity: .9;
+      filter: drop-shadow(1px 2px 1px rgba(49,64,65,.3));
+    }
+
+    .foam-glow { fill: #f7f4e8; opacity: .52; filter: blur(13px); }
+
+    .foam {
+      fill: #fffdf2;
+      stroke: #cadbd7;
+      stroke-width: 7px;
+      paint-order: stroke fill;
+      opacity: .93;
+      filter: url(#foam-edge);
+    }
+
+    .wash-traces { fill: none; stroke: #f9f5e7; stroke-linecap: round; stroke-linejoin: round; }
+    .wash-traces path:nth-child(1) { stroke-width: 18px; opacity: .58; }
+    .wash-traces path:nth-child(2) { stroke-width: 8px; opacity: .68; }
+    .wash-traces path:nth-child(3) { stroke-width: 6px; opacity: .55; }
+    .wash-traces.soft { opacity: .62; }
+    .front-foam { fill: none; stroke: #fffdf4; stroke-linecap: round; stroke-linejoin: round; opacity: .8; }
+    .front-foam path:nth-child(1) { stroke-width: 12px; }
+    .front-foam path:nth-child(2) { stroke-width: 5px; opacity: .7; }
+
+    .details {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .description { margin: 0; color: #66787a; font-size: 13px; line-height: 1.65; }
+
+    .small-test { display: grid; justify-items: center; gap: 6px; color: #859394; font-size: 10px; white-space: nowrap; }
+
+    .mini {
+      position: relative;
+      width: 56px;
+      height: 56px;
+      overflow: hidden;
+      border-radius: 29%;
+      box-shadow: 0 3px 9px rgba(32,53,57,.18);
+    }
+
+    .mini img, .mini svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .mini img { object-fit: cover; }
+    .mini text { font-size: 280px; letter-spacing: 0; }
+    .mini .sand-shadow { filter: blur(5px); }
+    .mini .sand-highlight { stroke-width: 12px; }
+    .mini .sand-face { stroke-width: 7px; }
+    .mini .foam-glow { filter: blur(16px); }
+    .mini .foam { stroke-width: 10px; }
+
+    footer {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      color: #79888a;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 680px) {
+      body { padding: 22px 16px 30px; }
+      .candidates { grid-template-columns: 1fr; }
+      article { max-width: 470px; width: 100%; margin: 0 auto; }
+      .icon { width: min(100%, 390px); }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">UNFINISHED · ICON STUDY 01</p>
+      <h1>三个字，也被潮水带上岸</h1>
+      <p class="intro">不再把「未完成」规整地横排在海岸线上。三个字各自成为被浪推送的对象，沿着水沙交界处错落停下；下方小图按 56 px 桌面图标尺寸预览。</p>
+    </header>
+
+    <section class="candidates" aria-label="图标候选方案">
+      <article>
+        <div class="art-label"><h2>浪沫推送</h2><span class="letter">A · 字随浪走</span></div>
+        <div class="icon">
+          <img src="base.png" alt="质朴色调的沙滩与海浪" />
+          <svg viewBox="0 0 1254 1254" role="img" aria-label="未完成三个字像被浪沫推着沿海岸错落上岸">
+            <defs>
+              <filter id="wet-sand" x="-12%" y="-12%" width="124%" height="124%">
+                <feTurbulence type="fractalNoise" baseFrequency=".009 .017" numOctaves="2" seed="5" result="grain" />
+                <feDisplacementMap in="SourceGraphic" in2="grain" scale="3" xChannelSelector="R" yChannelSelector="G" />
+              </filter>
+            </defs>
+            <g class="wash-traces">
+              <path d="M190 280 C285 308 342 335 428 370 S577 439 650 480 S810 546 1004 639" />
+              <path d="M220 309 C300 330 360 358 440 391 S585 458 663 497 S822 568 968 628" />
+              <path d="M300 232 C350 258 383 292 419 326 M548 387 C593 407 615 435 650 462 M745 500 C779 522 805 546 835 576" />
+            </g>
+            <g filter="url(#wet-sand)">
+              <text class="sand-shadow" x="430" y="350" transform="rotate(-8 430 350)">未</text>
+              <text class="sand-highlight" x="430" y="350" transform="rotate(-8 430 350)">未</text>
+              <text class="sand-face" x="430" y="350" transform="rotate(-8 430 350)">未</text>
+              <text class="sand-shadow" x="630" y="462" transform="rotate(4 630 462)">完</text>
+              <text class="sand-highlight" x="630" y="462" transform="rotate(4 630 462)">完</text>
+              <text class="sand-face" x="630" y="462" transform="rotate(4 630 462)">完</text>
+              <text class="sand-shadow" x="820" y="566" transform="rotate(-6 820 566)">成</text>
+              <text class="sand-highlight" x="820" y="566" transform="rotate(-6 820 566)">成</text>
+              <text class="sand-face" x="820" y="566" transform="rotate(-6 820 566)">成</text>
+            </g>
+            <g class="front-foam">
+              <path d="M268 455 C309 426 336 415 364 411 M498 553 C532 532 555 517 575 505 M700 648 C735 626 760 608 781 589" />
+              <path d="M365 469 C395 449 414 435 441 430 M587 566 C615 549 638 537 660 530 M790 659 C816 646 842 628 860 613" />
+            </g>
+          </svg>
+        </div>
+        <div class="details">
+          <p class="description">每个字略有转向、位置错开，底部沾着湿沙和断续泡沫，像刚被浪推到潮线上。</p>
+          <div class="small-test"><div class="mini"><img src="base.png" alt="" /><svg viewBox="0 0 1254 1254" aria-hidden="true"><text class="sand-shadow" x="430" y="350" transform="rotate(-8 430 350)">未</text><text class="sand-highlight" x="430" y="350" transform="rotate(-8 430 350)">未</text><text class="sand-face" x="430" y="350" transform="rotate(-8 430 350)">未</text><text class="sand-shadow" x="630" y="462" transform="rotate(4 630 462)">完</text><text class="sand-highlight" x="630" y="462" transform="rotate(4 630 462)">完</text><text class="sand-face" x="630" y="462" transform="rotate(4 630 462)">完</text><text class="sand-shadow" x="820" y="566" transform="rotate(-6 820 566)">成</text><text class="sand-highlight" x="820" y="566" transform="rotate(-6 820 566)">成</text><text class="sand-face" x="820" y="566" transform="rotate(-6 820 566)">成</text></svg></div><span>56 px</span></div>
+        </div>
+      </article>
+
+      <article>
+        <div class="art-label"><h2>退潮留字</h2><span class="letter">B · 字被浪留下</span></div>
+        <div class="icon">
+          <img src="base.png" alt="质朴色调的沙滩与海浪" />
+          <svg viewBox="0 0 1254 1254" role="img" aria-label="未完成三个字像浪退后留在湿沙上的泡沫字迹">
+            <defs>
+              <filter id="foam-edge" x="-15%" y="-15%" width="130%" height="130%">
+                <feTurbulence type="fractalNoise" baseFrequency=".012 .028" numOctaves="2" seed="11" result="grain" />
+                <feDisplacementMap in="SourceGraphic" in2="grain" scale="8" xChannelSelector="R" yChannelSelector="G" />
+              </filter>
+            </defs>
+            <g class="wash-traces soft">
+              <path d="M190 280 C285 308 342 335 428 370 S577 439 650 480 S810 546 1004 639" />
+              <path d="M220 309 C300 330 360 358 440 391 S585 458 663 497 S822 568 968 628" />
+            </g>
+            <g>
+              <text class="foam-glow" x="430" y="350" transform="rotate(-8 430 350)">未</text>
+              <text class="foam" x="430" y="350" transform="rotate(-8 430 350)">未</text>
+              <text class="foam-glow" x="630" y="462" transform="rotate(4 630 462)">完</text>
+              <text class="foam" x="630" y="462" transform="rotate(4 630 462)">完</text>
+              <text class="foam-glow" x="820" y="566" transform="rotate(-6 820 566)">成</text>
+              <text class="foam" x="820" y="566" transform="rotate(-6 820 566)">成</text>
+            </g>
+            <g class="front-foam">
+              <path d="M263 457 C306 426 337 416 366 412 M493 554 C531 531 554 515 576 505 M696 650 C734 627 758 610 783 589" />
+              <path d="M361 473 C394 448 418 435 444 430 M583 568 C615 548 640 536 664 530 M785 662 C817 645 841 628 864 612" />
+            </g>
+          </svg>
+        </div>
+        <div class="details">
+          <p class="description">泡沫把三个字分段带到岸边，浪退后仍留下湿润的字形；动势更明显，但质感更梦幻。</p>
+          <div class="small-test"><div class="mini"><img src="base.png" alt="" /><svg viewBox="0 0 1254 1254" aria-hidden="true"><text class="foam-glow" x="430" y="350" transform="rotate(-8 430 350)">未</text><text class="foam" x="430" y="350" transform="rotate(-8 430 350)">未</text><text class="foam-glow" x="630" y="462" transform="rotate(4 630 462)">完</text><text class="foam" x="630" y="462" transform="rotate(4 630 462)">完</text><text class="foam-glow" x="820" y="566" transform="rotate(-6 820 566)">成</text><text class="foam" x="820" y="566" transform="rotate(-6 820 566)">成</text></svg></div><span>56 px</span></div>
+        </div>
+      </article>
+    </section>
+
+    <footer>这是方向小样，不会改动当前已安装图标。三个字沿潮线错落落下，不再像普通标题；重点看小尺寸时是否仍能读出「未完成」，以及泡沫质感会不会削弱字形。</footer>
+  </main>
+</body>
+</html>

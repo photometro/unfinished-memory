@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.unfinished.app.data.V1ProtocolTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-07T00:11:08.706Z" hostname="去拍地铁" time="0.032">
+  <properties/>
+  <testcase name="localDateNotZoneOrTwentyFourHourBuckets" classname="com.unfinished.app.data.V1ProtocolTest" time="0.018"/>
+  <testcase name="legacyNeverBecomesBlindAndLabelNeverUsesBody" classname="com.unfinished.app.data.V1ProtocolTest" time="0.012"/>
+  <testcase name="dormancyAndPoolsNeverUseSevenDayException" classname="com.unfinished.app.data.V1ProtocolTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

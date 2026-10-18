@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f1e9">
+  <title>未完成 · 海玻璃字图标小样</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #263c40;
+      --muted: #758789;
+      --paper: #f4f1e9;
+      --line: rgba(42, 68, 69, .11);
+      --sea: #315b60;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100svh;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at 50% -18%, rgba(255,255,255,.95), transparent 58%),
+        var(--paper);
+      font-family: "Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .page {
+      width: min(1040px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: clamp(32px, 6vw, 66px) 0 116px;
+    }
+    .heading { margin: 0 auto 32px; text-align: center; }
+    .eyebrow {
+      margin: 0 0 13px;
+      color: #7a8b87;
+      font: 600 11px/1.2 ui-sans-serif, system-ui, sans-serif;
+      letter-spacing: .19em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(25px, 4vw, 37px);
+      line-height: 1.25;
+      letter-spacing: .025em;
+      font-weight: 650;
+    }
+    .intro {
+      margin: 13px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .showcase {
+      display: grid;
+      grid-template-columns: minmax(300px, 1.1fr) minmax(260px, .9fr);
+      align-items: center;
+      gap: clamp(26px, 6vw, 76px);
+      width: min(890px, 100%);
+      margin: 0 auto;
+      padding: clamp(20px, 4.2vw, 42px);
+      border: 1px solid rgba(74, 91, 81, .09);
+      border-radius: 30px;
+      background: rgba(255,255,255,.54);
+      box-shadow: 0 22px 70px rgba(47, 63, 56, .08), inset 0 1px rgba(255,255,255,.82);
+      backdrop-filter: blur(12px);
+    }
+    .art-column { display: grid; justify-items: center; gap: 15px; }
+    .icon-frame {
+      position: relative;
+      width: min(100%, 440px);
+      aspect-ratio: 1;
+      overflow: hidden;
+      border-radius: 28%;
+      background: #d7e4df;
+      box-shadow: 0 22px 42px rgba(35, 63, 67, .2), 0 3px 8px rgba(35, 63, 67, .13);
+      isolation: isolate;
+    }
+    .icon-art { display: block; width: 100%; height: 100%; }
+    .art-note {
+      margin: 0;
+      color: #82918b;
+      font-size: 11px;
+      letter-spacing: .08em;
+    }
+    .details { min-width: 0; }
+    .option-id {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #71857f;
+      font: 650 11px/1.2 ui-sans-serif, system-ui, sans-serif;
+      letter-spacing: .15em;
+    }
+    .option-id::before {
+      content: "";
+      width: 18px;
+      height: 1px;
+      background: #91a8a1;
+    }
+    h2 {
+      margin: 15px 0 10px;
+      font-size: clamp(24px, 3vw, 31px);
+      font-weight: 620;
+      line-height: 1.3;
+      letter-spacing: .02em;
+    }
+    .description {
+      max-width: 31em;
+      min-height: 3.6em;
+      margin: 0;
+      color: #687b7b;
+      font-size: 14px;
+      line-height: 1.85;
+    }
+    .principles {
+      display: grid;
+      gap: 0;
+      margin: 23px 0 0;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid var(--line);
+    }
+    .principles li {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 12px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--line);
+      color: #718180;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+    .principles strong { color: #435e60; font-weight: 620; }
+    .small-check {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 22px;
+      color: #71817e;
+      font-size: 11px;
+      letter-spacing: .06em;
+    }
+    .mini-frame {
+      width: 62px;
+      height: 62px;
+      flex: 0 0 auto;
+      overflow: hidden;
+      border-radius: 18px;
+      box-shadow: 0 5px 14px rgba(34, 59, 61, .17);
+    }
+    .comparison {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin: 23px auto 0;
+    }
+    .compare-button {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px 8px 8px;
+      border: 1px solid transparent;
+      border-radius: 17px;
+      color: #71817d;
+      background: transparent;
+      font: inherit;
+      cursor: pointer;
+      transition: background .2s ease, border-color .2s ease, transform .2s ease;
+    }
+    .compare-button:hover { transform: translateY(-2px); }
+    .compare-button[aria-pressed="true"] {
+      color: #385458;
+      background: rgba(255,255,255,.62);
+      border-color: rgba(58, 92, 92, .16);
+    }
+    .compare-thumb {
+      display: block;
+      width: 46px;
+      height: 46px;
+      overflow: hidden;
+      border-radius: 13px;
+      box-shadow: 0 3px 8px rgba(36, 60, 62, .15);
+    }
+    .compare-meta { display: grid; gap: 3px; text-align: left; }
+    .compare-meta strong { font-size: 12px; font-weight: 650; }
+    .compare-meta small { color: #8a9692; font-size: 10px; }
+    .switcher {
+      position: fixed;
+      z-index: 5;
+      left: 50%;
+      bottom: max(17px, env(safe-area-inset-bottom));
+      display: grid;
+      grid-template-columns: 48px minmax(160px, 220px) 48px;
+      align-items: center;
+      min-height: 54px;
+      padding: 5px;
+      transform: translateX(-50%);
+      border: 1px solid rgba(255,255,255,.26);
+      border-radius: 999px;
+      color: #f5f5ee;
+      background: rgba(42, 72, 71, .93);
+      box-shadow: 0 10px 34px rgba(27, 48, 48, .25), inset 0 1px rgba(255,255,255,.18);
+      backdrop-filter: blur(18px) saturate(125%);
+    }
+    .switcher button {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 42px;
+      border: 0;
+      border-radius: 50%;
+      color: inherit;
+      background: transparent;
+      font: 400 24px/1 ui-sans-serif, system-ui, sans-serif;
+      cursor: pointer;
+      transition: background .18s ease;
+    }
+    .switcher button:hover { background: rgba(255,255,255,.14); }
+    .switch-label {
+      overflow: hidden;
+      text-align: center;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .035em;
+    }
+    .disclaimer {
+      margin: 22px auto 0;
+      color: #9a9d91;
+      text-align: center;
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    /* The mark stays identical in both options; only the glass treatment changes. */
+    .mark { transform: rotate(23deg); transform-box: view-box; transform-origin: 50% 37.9%; }
+    .mark text {
+      text-anchor: middle;
+      font-family: "Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+      font-size: 286px;
+      font-weight: 760;
+      letter-spacing: -12px;
+      stroke-linejoin: round;
+      paint-order: stroke fill;
+    }
+    .mark-shadow { fill: #153b48; stroke: #153b48; stroke-width: 30px; opacity: .27; filter: url(#softShadow); }
+    .mark-edge { fill: none; stroke: rgba(22, 57, 67, .52); stroke-width: 19px; }
+    .mark-body { stroke-width: 7px; }
+    .mark-highlight { fill: none; stroke: rgba(250, 255, 250, .9); stroke-width: 5px; }
+    .treatment-frosted .mark-body { fill: url(#frostedGlass); stroke: #668e91; filter: url(#frostRelief); }
+    .treatment-frosted .mark-edge { stroke: rgba(31, 75, 84, .48); }
+    .treatment-frosted .mark-highlight { stroke-width: 5px; }
+    .treatment-refractive .mark-body { fill: url(#refractiveGlass); fill-opacity: .75; stroke: rgba(240, 255, 255, .86); filter: url(#clearRelief); }
+    .treatment-refractive .mark-edge { stroke: rgba(20, 69, 86, .62); stroke-width: 24px; }
+    .treatment-refractive .mark-highlight { stroke: rgba(255,255,255,.98); stroke-width: 7px; }
+    .treatment-refractive .mark-glint { fill: none; stroke: rgba(180, 237, 244, .73); stroke-width: 3px; }
+    .treatment-frosted .mark-glint { display: none; }
+    .mini-frame .mark text, .compare-thumb .mark text { font-size: 286px; }
+
+    @media (max-width: 720px) {
+      .page { width: min(100% - 28px, 520px); padding-top: 31px; }
+      .heading { margin-bottom: 23px; }
+      .showcase { grid-template-columns: 1fr; gap: 25px; padding: 18px; border-radius: 25px; }
+      .icon-frame { width: min(100%, 390px); }
+      .details { width: min(100%, 390px); margin: 0 auto; }
+      h2 { margin-top: 11px; }
+      .principles { margin-top: 17px; }
+      .comparison { gap: 4px; }
+      .compare-button { gap: 7px; padding-right: 8px; }
+      .compare-thumb { width: 40px; height: 40px; border-radius: 11px; }
+    }
+    @media (max-width: 390px) {
+      .compare-meta small { display: none; }
+      .compare-meta strong { font-size: 11px; }
+      .switcher { grid-template-columns: 44px minmax(142px, 190px) 44px; }
+      .switcher button { width: 40px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <svg aria-hidden="true" width="0" height="0" style="position:absolute;overflow:hidden">
+    <defs>
+      <linearGradient id="frostedGlass" x1=".15" y1="0" x2=".78" y2="1">
+        <stop offset="0" stop-color="#f8fffa" stop-opacity=".96" />
+        <stop offset=".28" stop-color="#c5e5df" stop-opacity=".93" />
+        <stop offset=".62" stop-color="#82b5bb" stop-opacity=".94" />
+        <stop offset="1" stop-color="#d9e9dd" stop-opacity=".97" />
+      </linearGradient>
+      <linearGradient id="refractiveGlass" x1=".15" y1="0" x2=".86" y2="1">
+        <stop offset="0" stop-color="#faffff" stop-opacity=".94" />
+        <stop offset=".2" stop-color="#b8e4e8" stop-opacity=".75" />
+        <stop offset=".52" stop-color="#79b2c0" stop-opacity=".59" />
+        <stop offset=".77" stop-color="#eaf8e9" stop-opacity=".74" />
+        <stop offset="1" stop-color="#a8d2d1" stop-opacity=".9" />
+      </linearGradient>
+      <filter id="softShadow" x="-20%" y="-20%" width="150%" height="160%" color-interpolation-filters="sRGB">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur" />
+        <feOffset in="blur" dx="0" dy="9" result="offset" />
+        <feFlood flood-color="#123945" flood-opacity=".35" result="shade" />
+        <feComposite in="shade" in2="offset" operator="in" result="shadow" />
+        <feMerge><feMergeNode in="shadow" /><feMergeNode in="SourceGraphic" /></feMerge>
+      </filter>
+      <filter id="frostRelief" x="-15%" y="-20%" width="130%" height="150%" color-interpolation-filters="sRGB">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur" />
+        <feOffset in="blur" dx="0" dy="4" result="offset" />
+        <feFlood flood-color="#153e4a" flood-opacity=".32" result="shade" />
+        <feComposite in="shade" in2="offset" operator="in" result="shadow" />
+        <feSpecularLighting in="SourceAlpha" surfaceScale="5" specularConstant=".48" specularExponent="18" lighting-color="#ffffff" result="specular">
+          <feDistantLight azimuth="225" elevation="50" />
+        </feSpecularLighting>
+        <feComposite in="specular" in2="SourceAlpha" operator="in" result="shine" />
+        <feMerge><feMergeNode in="shadow" /><feMergeNode in="SourceGraphic" /><feMergeNode in="shine" /></feMerge>
+      </filter>
+      <filter id="clearRelief" x="-15%" y="-20%" width="130%" height="150%" color-interpolation-filters="sRGB">
+        <feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="1" seed="7" result="texture" />
+        <feDisplacementMap in="SourceGraphic" in2="texture" scale="3" xChannelSelector="R" yChannelSelector="G" result="bent" />
+        <feGaussianBlur in="SourceAlpha" stdDeviation="2.5" result="blur" />
+        <feOffset in="blur" dx="0" dy="5" result="offset" />
+        <feFlood flood-color="#123d4b" flood-opacity=".38" result="shade" />
+        <feComposite in="shade" in2="offset" operator="in" result="shadow" />
+        <feSpecularLighting in="SourceAlpha" surfaceScale="8" specularConstant=".85" specularExponent="24" lighting-color="#ffffff" result="specular">
+          <feDistantLight azimuth="222" elevation="62" />
+        </feSpecularLighting>
+        <feComposite in="specular" in2="SourceAlpha" operator="in" result="shine" />
+        <feMerge><feMergeNode in="shadow" /><feMergeNode in="bent" /><feMergeNode in="shine" /></feMerge>
+      </filter>
+      <symbol id="shore-mark-a" viewBox="0 0 1254 1254">
+        <g class="mark treatment-frosted">
+          <text class="mark-shadow" x="627" y="475">未完成</text>
+          <text class="mark-edge" x="627" y="475">未完成</text>
+          <text class="mark-body" x="627" y="475">未完成</text>
+          <text class="mark-highlight" x="627" y="475">未完成</text>
+          <text class="mark-glint" x="624" y="469">未完成</text>
+        </g>
+      </symbol>
+      <symbol id="shore-mark-b" viewBox="0 0 1254 1254">
+        <g class="mark treatment-refractive">
+          <text class="mark-shadow" x="627" y="475">未完成</text>
+          <text class="mark-edge" x="627" y="475">未完成</text>
+          <text class="mark-body" x="627" y="475">未完成</text>
+          <text class="mark-highlight" x="627" y="475">未完成</text>
+          <text class="mark-glint" x="624" y="469">未完成</text>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <main class="page">
+    <header class="heading">
+      <p class="eyebrow">UNFINISHED · ICON STUDY 02</p>
+      <h1>让「未完成」沿着潮线抵岸</h1>
+      <p class="intro">同一张已定版海岸底图，只比较字的材质。字不是贴纸，而是被潮水磨润后留在岸边的海玻璃。</p>
+    </header>
+
+    <section class="showcase" aria-live="polite">
+      <div class="art-column">
+        <div class="icon-frame" id="mainIcon" role="img" aria-label="海岸应用图标预览">
+          <svg class="icon-art variant-a" viewBox="0 0 1254 1254" aria-hidden="true">
+            <image href="./base.png" width="1254" height="1254" preserveAspectRatio="xMidYMid slice" />
+            <use href="#shore-mark-a" x="0" y="0" width="1254" height="1254" />
+          </svg>
+        </div>
+        <p class="art-note">LAUNCHER ICON · 圆角遮罩下的实际构图</p>
+      </div>
+
+      <div class="details">
+        <span class="option-id" id="optionId">A · 01 / 02</span>
+        <h2 id="optionTitle">雾面潮玻璃字</h2>
+        <p class="description" id="optionDescription">三字收成一个完整字组，沿着潮线倾斜落在沙与水的交界。柔雾质感更稳，缩小后轮廓仍然清楚。</p>
+        <ul class="principles">
+          <li><strong>字组</strong><span>整词同向、紧凑排列，不拆散成漂浮的单字。</span></li>
+          <li><strong>上岸感</strong><span>字脚贴近白色浪痕，保留像被水推上来的方向感。</span></li>
+          <li><strong>小尺寸</strong><span>玻璃边缘有明暗厚度，但不依赖细碎纹理才能辨认。</span></li>
+        </ul>
+        <div class="small-check">
+          <div class="mini-frame" aria-hidden="true">
+            <svg class="icon-art variant-a" viewBox="0 0 1254 1254">
+              <image href="./base.png" width="1254" height="1254" preserveAspectRatio="xMidYMid slice" />
+              <use href="#shore-mark-a" x="0" y="0" width="1254" height="1254" />
+            </svg>
+          </div>
+          <span>小尺寸识别检查<br>约 56 px 图标比例</span>
+        </div>
+      </div>
+    </section>
+
+    <nav class="comparison" aria-label="选择玻璃字方案">
+      <button class="compare-button" type="button" data-variant="A" aria-pressed="true">
+        <span class="compare-thumb" aria-hidden="true">
+          <svg class="icon-art variant-a" viewBox="0 0 1254 1254"><image href="./base.png" width="1254" height="1254" /><use href="#shore-mark-a" x="0" y="0" width="1254" height="1254" /></svg>
+        </span>
+        <span class="compare-meta"><strong>A · 雾面</strong><small>清晰、温润</small></span>
+      </button>
+      <button class="compare-button" type="button" data-variant="B" aria-pressed="false">
+        <span class="compare-thumb" aria-hidden="true">
+          <svg class="icon-art variant-b" viewBox="0 0 1254 1254"><image href="./base.png" width="1254" height="1254" /><use href="#shore-mark-b" x="0" y="0" width="1254" height="1254" /></svg>
+        </span>
+        <span class="compare-meta"><strong>B · 折光</strong><small>通透、映色</small></span>
+      </button>
+    </nav>
+    <p class="disclaimer">设计小样 · 只供方向比较，不会替换当前已定版图标或写入 Android 工程</p>
+  </main>
+
+  <div class="switcher" aria-label="方案切换">
+    <button type="button" id="previous" aria-label="上一个方案">‹</button>
+    <span class="switch-label" id="switchLabel">A · 雾面潮玻璃字</span>
+    <button type="button" id="next" aria-label="下一个方案">›</button>
+  </div>
+
+  <script>
+    (() => {
+      const options = {
+        A: {
+          index: "A · 01 / 02",
+          title: "雾面潮玻璃字",
+          description: "三字收成一个完整字组，沿着潮线倾斜落在沙与水的交界。柔雾质感更稳，缩小后轮廓仍然清楚。",
+          label: "A · 雾面潮玻璃字"
+        },
+        B: {
+          index: "B · 02 / 02",
+          title: "折光海玻璃字",
+          description: "字面更透，海蓝与沙色会穿过玻璃；边缘折出一圈冷亮高光，像潮水刚退时留在岸上的湿润玻璃。",
+          label: "B · 折光海玻璃字"
+        }
+      };
+      const variants = ["A", "B"];
+      const mainIcon = document.getElementById("mainIcon");
+      const icon = mainIcon.querySelector("svg");
+      const mainMark = icon.querySelector("use");
+      const smallIcon = document.querySelector(".mini-frame svg");
+      const smallMark = smallIcon.querySelector("use");
+      const title = document.getElementById("optionTitle");
+      const description = document.getElementById("optionDescription");
+      const optionId = document.getElementById("optionId");
+      const switchLabel = document.getElementById("switchLabel");
+      const compareButtons = [...document.querySelectorAll(".compare-button")];
+      let current = new URLSearchParams(location.search).get("variant") === "B" ? "B" : "A";
+
+      function select(variant) {
+        current = variant;
+        const option = options[variant];
+        icon.classList.toggle("variant-a", variant === "A");
+        icon.classList.toggle("variant-b", variant === "B");
+        smallIcon.classList.toggle("variant-a", variant === "A");
+        smallIcon.classList.toggle("variant-b", variant === "B");
+        const symbol = variant === "A" ? "#shore-mark-a" : "#shore-mark-b";
+        mainMark.setAttribute("href", symbol);
+        smallMark.setAttribute("href", symbol);
+        mainIcon.setAttribute("aria-label", `${option.label}，应用图标预览`);
+        title.textContent = option.title;
+        description.textContent = option.description;
+        optionId.textContent = option.index;
+        switchLabel.textContent = option.label;
+        compareButtons.forEach(button => button.setAttribute("aria-pressed", String(button.dataset.variant === variant)));
+        try { history.replaceState(null, "", `?variant=${variant}`); } catch (_) { /* file preview may disallow URL updates; the in-page switch still works */ }
+      }
+      function step(amount) {
+        const next = (variants.indexOf(current) + amount + variants.length) % variants.length;
+        select(variants[next]);
+      }
+      document.getElementById("previous").addEventListener("click", () => step(-1));
+      document.getElementById("next").addEventListener("click", () => step(1));
+      compareButtons.forEach(button => button.addEventListener("click", () => select(button.dataset.variant)));
+      window.addEventListener("keydown", event => {
+        if (event.key === "ArrowLeft") step(-1);
+        if (event.key === "ArrowRight") step(1);
+      });
+      select(current);
+    })();
+  </script>
+</body>
+</html>

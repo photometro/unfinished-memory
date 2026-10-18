@@ -1,0 +1,283 @@
+{
+  "intro": [
+    {
+      "app": {
+        "lightSource": "设计预览",
+        "period": "morning",
+        "previewSize": "elastic",
+        "reduced": "false",
+        "route": "home",
+        "safePreview": "false",
+        "scene": "quiet",
+        "space": "shore",
+        "stage": "shore",
+        "textScale": "normal"
+      },
+      "count": 1,
+      "surface": {
+        "animationActive": "true",
+        "assetDimensions": "887x1774,887x1774",
+        "decodedBytesEstimate": "12588304",
+        "frames": "5364",
+        "light": "1.0933,0.0323,0.0033,0.0093,1.0843,0.0032,0.0089,0.0298,1.0045,0.1050,0.0350,0.9600,-0.8200,-0.5700,0.0650,1.0000,0.6200,0.2300,0.0080",
+        "mapping": "{\"x\":[0.92075649165239,0,0.03962175417380498],\"y\":[0,1,0],\"scale\":0.5243975479143179}",
+        "period": "morning",
+        "renderer": "webgl",
+        "shoreMaster": "selected-v4",
+        "surfaceStudy": "13",
+        "textureBytesEstimate": "3154176",
+        "textureCount": "2",
+        "tide": "0.3000"
+      },
+      "test": "normal morning mid"
+    },
+    {
+      "app": {
+        "lightSource": "设计预览",
+        "period": "noon",
+        "previewSize": "elastic",
+        "reduced": "false",
+        "route": "home",
+        "safePreview": "false",
+        "scene": "quiet",
+        "space": "shore",
+        "stage": "shore",
+        "textScale": "normal"
+      },
+      "count": 1,
+      "surface": {
+        "animationActive": "true",
+        "assetDimensions": "887x1774,887x1774",
+        "decodedBytesEstimate": "12588304",
+        "frames": "5393",
+        "light": "1.1419,-0.0239,-0.0024,-0.0072,1.1396,-0.0024,-0.0073,-0.0246,1.1808,0.1350,0.0250,1.0250,0.1500,-0.9900,0.0250,0.8800,0.9500,1.0000,0.0170",
+        "mapping": "{\"x\":[0.92075649165239,0,0.03962175417380498],\"y\":[0,1,0],\"scale\":0.5243975479143179}",
+        "period": "noon",
+        "renderer": "webgl",
+        "shoreMaster": "selected-v4",
+        "surfaceStudy": "13",
+        "textureBytesEstimate": "3154176",
+        "textureCount": "2",
+        "tide": "0.3000"
+      },
+      "test": "skip noon mid"
+    },
+    {
+      "app": {
+        "lightSource": "设计预览",
+        "period": "afternoon",
+        "previewSize": "elastic",
+        "reduced": "true",
+        "route": "home",
+        "safePreview": "false",
+        "scene": "quiet",
+        "space": "shore",
+        "stage": "shore",
+        "textScale": "normal"
+      },
+      "count": 1,
+      "surface": {
+        "animationActive": "false",
+        "assetDimensions": "887x1774,887x1774",
+        "decodedBytesEstimate": "12588304",
+        "frames": "6191",
+        "light": "1.0939,0.0159,0.0016,0.0044,1.0244,0.0015,0.0039,0.0130,0.8916,0.0600,0.0200,1.0150,0.8700,-0.4900,0.1200,1.0000,0.5100,0.1500,0.0120",
+        "mapping": "{\"x\":[0.92075649165239,0,0.03962175417380498],\"y\":[0,1,0],\"scale\":0.5243975479143179}",
+        "period": "afternoon",
+        "renderer": "webgl",
+        "shoreMaster": "selected-v4",
+        "surfaceStudy": "13",
+        "textureBytesEstimate": "3154176",
+        "textureCount": "2",
+        "tide": "0.3000"
+      },
+      "test": "afternoon reduced during intro"
+    },
+    {
+      "app": {
+        "lightSource": "设计预览",
+        "period": "night",
+        "previewSize": "elastic",
+        "reduced": "false",
+        "route": "home",
+        "safePreview": "false",
+        "scene": "quiet",
+        "space": "shore",
+        "stage": "shore",
+        "textScale": "normal"
+      },
+      "count": 1,
+      "surface": {
+        "animationActive": "false",
+        "assetDimensions": "887x1774,887x1774",
+        "decodedBytesEstimate": "12588304",
+        "frames": "34",
+        "light": "0.2765,0.0526,0.0053,0.0206,0.4124,0.0070,0.0255,0.0858,0.4342,0.0220,0.0350,1.0000,-0.6200,-0.7800,0.0350,0.2200,0.5500,1.0000,0.0120",
+        "mapping": "{\"x\":[0.92075649165239,0,0.03962175417380498],\"y\":[0,1,0],\"scale\":0.5243975479143179}",
+        "period": "night",
+        "renderer": "static",
+        "shoreMaster": "selected-v4",
+        "surfaceStudy": "13",
+        "textureBytesEstimate": "0",
+        "textureCount": "0",
+        "tide": "0.5200"
+      },
+      "test": "static normal night high"
+    },
+    {
+      "app": {
+        "lightSource": "设计预览",
+        "period": "night",
+        "previewSize": "390x844",
+        "reduced": "false",
+        "route": "home",
+        "safePreview": "false",
+        "scene": "quiet",
+        "space": "shore",
+        "stage": "shore",
+        "textScale": "normal"
+      },
+      "count": 1,
+      "surface": {
+        "animationActive": "true",
+        "assetDimensions": "887x1774,887x1774",
+        "decodedBytesEstimate": "12588304",
+        "frames": "73",
+        "light": "0.2765,0.0526,0.0053,0.0206,0.4124,0.0070,0.0255,0.0858,0.4342,0.0220,0.0350,1.0000,-0.6200,-0.7800,0.0350,0.2200,0.5500,1.0000,0.0120",
+        "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+        "period": "night",
+        "renderer": "webgl",
+        "shoreMaster": "selected-v4",
+        "surfaceStudy": "13",
+        "textureBytesEstimate": "3154176",
+        "textureCount": "2",
+        "tide": "0.3000"
+      },
+      "test": "interrupted light + tide intro then skip"
+    }
+  ],
+  "sizes": [
+    {
+      "count": 1,
+      "mapping": "{\"x\":[1,0,0],\"y\":[0,0.8895925380461462,0.05520373097692688],\"scale\":0.3588289177001127}",
+      "rect": {
+        "bottom": -450.253173828125,
+        "height": 567.9904174804688,
+        "left": 202.90512084960935,
+        "right": 522.8944396972656,
+        "top": -1018.2435913085938,
+        "width": 319.98931884765625,
+        "x": 202.90512084960935,
+        "y": -1018.2435913085938
+      },
+      "renderer": "static",
+      "size": "320x568"
+    },
+    {
+      "count": 1,
+      "mapping": "{\"x\":[1,0,0],\"y\":[0,0.8907544701264719,0.054622764936764046],\"scale\":0.4039247463359639}",
+      "rect": {
+        "bottom": -449.8933715820313,
+        "height": 639.9920043945312,
+        "left": 182.90245056152344,
+        "right": 542.8971099853516,
+        "top": -1089.8853759765625,
+        "width": 359.9946594238281,
+        "x": 182.90245056152344,
+        "y": -1089.8853759765625
+      },
+      "renderer": "static",
+      "size": "360x640"
+    },
+    {
+      "count": 1,
+      "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+      "rect": {
+        "bottom": -449.7333984375,
+        "height": 843.9898681640625,
+        "left": 167.89712524414062,
+        "right": 557.8891296386719,
+        "top": -1293.7232666015625,
+        "width": 389.9920043945313,
+        "x": 167.89712524414062,
+        "y": -1293.7232666015625
+      },
+      "renderer": "static",
+      "size": "390x844"
+    },
+    {
+      "count": 1,
+      "mapping": "{\"x\":[0.92075649165239,0,0.03962175417380498],\"y\":[0,1,0],\"scale\":0.5243975479143179}",
+      "rect": {
+        "bottom": -450.4264526367187,
+        "height": 931.9962768554688,
+        "left": 147.8944549560547,
+        "right": 577.8917694091797,
+        "top": -1382.4227294921875,
+        "width": 429.997314453125,
+        "x": 147.8944549560547,
+        "y": -1382.4227294921875
+      },
+      "renderer": "static",
+      "size": "430x932"
+    },
+    {
+      "count": 1,
+      "mapping": "{\"x\":[1,0,0],\"y\":[0,0.6670404959014722,0.1664797520492639],\"scale\":0.863902198421646}",
+      "rect": {
+        "bottom": -450.54638671875,
+        "height": 1023.9871826171876,
+        "left": -21.095415115356445,
+        "right": 746.8950023651123,
+        "top": -1474.5335693359375,
+        "width": 767.9904174804688,
+        "x": -21.095415115356445,
+        "y": -1474.5335693359375
+      },
+      "renderer": "static",
+      "size": "768x1024"
+    }
+  ],
+  "draft": "fictional text retained after light change and temporary save/resume",
+  "flow": {
+    "app": {
+      "lightSource": "设计预览",
+      "period": "night",
+      "previewSize": "390x844",
+      "reduced": "false",
+      "route": "seal",
+      "safePreview": "false",
+      "scene": "quiet",
+      "space": "ritual",
+      "stage": "shore",
+      "textScale": "normal"
+    },
+    "currentCount": 1,
+    "phase": "complete",
+    "state": "页面：交给时间 · 光照：晚上\n\n记录：4 条演示 · 当前会话：无\n\n回忆快照：0 · 可见线索：0\n\n载体：demo-memory-1791123874750 · 仅内存",
+    "surface": {
+      "animationActive": "false",
+      "assetDimensions": "887x1774,887x1774",
+      "decodedBytesEstimate": "12588304",
+      "frames": "622",
+      "light": "0.2765,0.0526,0.0053,0.0206,0.4124,0.0070,0.0255,0.0858,0.4342,0.0220,0.0350,1.0000,-0.6200,-0.7800,0.0350,0.2200,0.5500,1.0000,0.0120",
+      "mapping": "{\"x\":[0.921975290320187,0,0.039012354839906505],\"y\":[0,1,0],\"scale\":0.4747921364148816}",
+      "period": "night",
+      "renderer": "webgl",
+      "shoreMaster": "selected-v4",
+      "surfaceStudy": "13",
+      "textureBytesEstimate": "3154176",
+      "textureCount": "2",
+      "tide": "0.3000"
+    }
+  },
+  "completedScreenshotsDiffer": true,
+  "autoTide": {
+    "begin": "0.2995",
+    "end": "0.2689"
+  },
+  "limitations": [
+    "Browser screenshot layout differs from DOM inspection layout; fixed crop used for evidence gallery only",
+    "No actual GPU/heap/frame-time/context-loss or physical-device profiling"
+  ]
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>未完成 · C 存片 · 曲线修订 v3</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#f4f6f5;color:#24404e;font-family:"Microsoft YaHei","PingFang SC",sans-serif;line-height:1.65}main{max-width:1180px;margin:auto;padding:42px 24px 64px}h1{font-size:26px;font-weight:500;margin:0 0 8px}h2{font-size:20px;font-weight:500;margin:38px 0 14px}p{margin:0 0 16px;color:#607783}.note{font-size:14px}.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}figure{margin:0}figure>img{width:100%;height:auto;display:block}figcaption{margin-top:12px;font-size:15px}.small{font-size:13px;color:#607783}.board{display:block;width:100%;height:auto}.actual{display:flex;gap:36px;flex-wrap:wrap;padding:28px;background:#e7eeec;border-radius:16px}.sample{display:flex;gap:18px;align-items:center}.sample div{font-size:13px;line-height:1.8}.swatches{display:flex;gap:18px;flex-wrap:wrap}.swatch{display:flex;align-items:center;gap:8px;font-size:13px}.swatch i{width:26px;height:26px;border-radius:6px;display:block}a{color:#286a90}.foot{padding-top:24px;font-size:13px;max-width:800px}.safe{max-width:420px}.scroll{overflow:auto}.review-tag{display:inline-block;padding:3px 10px;margin-bottom:16px;border:1px solid #c8d6dc;border-radius:99px;color:#446575;font-size:12px}@media(max-width:720px){main{padding:28px 18px}.three{grid-template-columns:1fr;max-width:460px;margin:auto}.actual{gap:24px;padding:22px}.scroll>.board{min-width:720px}h1{font-size:23px}}
+  </style>
+</head>
+<body>
+<main>
+  <span class="review-tag">独立评审稿 · 未替换 App · 未上机</span>
+  <h1>未完成 · C 存片 / 曲线修订 v3</h1>
+  <p>三片、三层海蓝和左右对齐不变。保持当前真机版宽度，恢复少量高度；上间隙舒展，下间隙在右侧更明显地上扬。</p>
+  <section class="three">
+    <figure><img src="reference-original.png" alt="已安装的近方形 v2 图标资源"><figcaption>当前真机版 v2<div class="small">宽高比 0.96∶1，用作对照；这里显示资源，不是真机截图。</div></figcaption></figure>
+    <figure><img src="shrink-only.png" alt="仅恢复高度而保持原曲线的控制项"><figcaption>仅恢复一点高度<div class="small">宽度不变，高度增加约 6.7%；原来的两道曲线不变。</div></figcaption></figure>
+    <figure><img src="icon-1024.png" alt="保留对齐和海蓝色、修订曲线的新图标"><figcaption>曲线修订 v3<div class="small">宽高比 0.90∶1；两道曲线有不同走势，而非平行切分。</div></figcaption></figure>
+  </section>
+  <h2>先看桌面大小</h2>
+  <p class="note">以下按 48px / 64px 原尺寸显示。请使用 100% 页面缩放；浏览器像素不等于所有手机的实际图标尺寸。</p>
+  <div class="actual">
+    <div class="sample"><img src="reference-48.png" width="48" height="48" alt="当前版48px"><img src="reference-64.png" width="64" height="64" alt="当前版64px"><div>当前真机版<br>48 / 64px</div></div>
+    <div class="sample"><img src="color-48.png" width="48" height="48" alt="修订版48px"><img src="color-64.png" width="64" height="64" alt="修订版64px"><div>曲线修订版<br>48 / 64px</div></div>
+    <div class="sample"><img src="mono-48.png" width="48" height="48" alt="单色48px"><img src="mono-64.png" width="64" height="64" alt="单色64px"><div>单色修订版<br>48 / 64px</div></div>
+  </div>
+  <h2>裁切与背景对照</h2>
+  <p class="note">模拟预览，不是真机截图；邻近图形为占位符，超椭圆为近似形状。彩色与单色使用同一套曲线。</p>
+  <div class="scroll"><img class="board" src="desktop-simulation.png" alt="不同模拟背景上的圆形、超椭圆、圆角与主题着色预览"></div>
+  <h2>前后对照总览</h2>
+  <div class="scroll"><img class="board" src="comparison.png" alt="真机版、仅恢复高度的控制项和曲线修订版的对照"></div>
+  <h2>保留的三层海蓝</h2>
+  <div class="swatches"><span class="swatch"><i style="background:#5DB2D0"></i>浅水</span><span class="swatch"><i style="background:#2876A7"></i>中水</span><span class="swatch"><i style="background:#154E81"></i>深水</span></div>
+  <h2>候选资源与检查</h2>
+  <p><a href="mark-source.svg">可编辑形状</a> · <a href="icon-master.svg">自适应主文件</a> · <a href="monochrome.svg">单色层</a> · <a href="asset-qa.json">几何检查</a> · <a href="audit-results.json">资源检查</a> · <a href="README.md">修改说明</a></p>
+  <p class="note">下图为检查线框，不会出现在图标中。候选 Android 资源只保存在本目录的 android-candidate/res/，未接入 App。</p>
+  <img class="board safe" src="safe-zone.png" alt="画布和安全圆内的修订图标">
+  <p class="foot">本轮改善的是比例和曲线，不把它宣告为定稿，也未验证陌生用户能否判断产品类别或认出“未完成”。当前两台手机仍使用已安装的 v2。</p>
+</main>
+</body>
+</html>

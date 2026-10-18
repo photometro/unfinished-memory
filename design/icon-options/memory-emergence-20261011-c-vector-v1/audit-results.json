@@ -1,0 +1,42 @@
+{
+  "status": "PASS: automated audit, not visual/user/device acceptance",
+  "svgXmlParity": true,
+  "htmlLocalLinks": true,
+  "sourceMaskOverlap": 0.990442,
+  "smallSizePlanes": {
+    "48": {
+      "connectedPlanes": 3,
+      "planeAreaPixels": [
+        366,
+        334,
+        288
+      ]
+    },
+    "64": {
+      "connectedPlanes": 3,
+      "planeAreaPixels": [
+        667,
+        618,
+        524
+      ]
+    }
+  },
+  "dimensions": {
+    "comparison.png": [
+      1240,
+      910
+    ],
+    "desktop-simulation.png": [
+      1170,
+      850
+    ],
+    "icon-1024.png": [
+      1024,
+      1024
+    ],
+    "store-512.png": [
+      512,
+      512
+    ]
+  }
+}

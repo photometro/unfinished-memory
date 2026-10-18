@@ -1,0 +1,35 @@
+{
+  "name": "未完成 · C 存片 / 近方形 v2",
+  "status": "candidate-not-installed",
+  "reference": "<project-root>/design/icon-options/memory-emergence-20261011-c-vector-v1/icon-1024.png",
+  "baselineSource": "baseline-source.svg",
+  "baselineScale": 0.071968499,
+  "baselineDpSize": [46.491650484, 54.1203114],
+  "background": "#FEFEFB",
+  "colors": ["#5DB2D0", "#2876A7", "#154E81"],
+  "monochrome": "#173E57",
+  "sourceViewport": 1254,
+  "sourceCenter": [627, 622],
+  "adaptiveViewportDp": 108,
+  "visibleViewportDp": 72,
+  "safeCircleDiameterDp": 66,
+  "safeCircleInsetDp": 0.15,
+  "exportScale": 0.06765038906,
+  "targetAspectRatio": 0.96,
+  "widthReductionFromV1": 0.06,
+  "geometry": {
+    "baselineSourceBounds": [304, 246, 950, 998],
+    "compressY": 0.8871849738468855,
+    "perPlaneShiftY": [-2.8767831669044184, 0, 2.8767831669044184],
+    "note": "Compress the height of each plane and compensate inter-plane gaps before uniform platform scaling. Source path coordinates encode this edit."
+  },
+  "normalization": "Use v1 platform scale multiplied by 0.94; do not enlarge the revised mark back to the safe-circle limit",
+  "constraints": [
+    "Keep three aligned planes and two open curved gaps",
+    "Keep x coordinates, order, palette and background unchanged",
+    "Make the combined mark near-square by reducing plane height, not by squeezing the gaps",
+    "No text, new symbol, texture, gradient, material, baked outer mask or shadow",
+    "Use identical path data for color and monochrome exports",
+    "Only export candidate resources; do not edit the active application resources or install an app"
+  ]
+}

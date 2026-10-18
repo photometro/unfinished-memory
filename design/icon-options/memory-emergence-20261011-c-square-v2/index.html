@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>未完成 · C 存片 · 缩小与近方形</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#f4f6f5;color:#24404e;font-family:"Microsoft YaHei","PingFang SC",sans-serif;line-height:1.6}main{max-width:1180px;margin:auto;padding:42px 24px 64px}h1{font-size:26px;font-weight:500;margin:0 0 8px}h2{font-size:20px;font-weight:500;margin:40px 0 14px}p{margin:0 0 16px;color:#607783}.note{font-size:14px}.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}figure{margin:0}figure>img{width:100%;height:auto;display:block}figcaption{margin-top:12px;font-size:15px}.small{font-size:13px;color:#607783}.board{display:block;width:100%;height:auto}.actual{display:flex;gap:40px;flex-wrap:wrap;padding:28px;background:#e7eeec;border-radius:16px}.sample{display:flex;gap:20px;align-items:center}.sample img{object-fit:contain;image-rendering:auto}.sample div{font-size:13px;line-height:1.8}.swatches{display:flex;gap:12px;flex-wrap:wrap}.swatch{display:flex;align-items:center;gap:8px;font-size:13px}.swatch i{width:28px;height:28px;border-radius:6px;display:block}a{color:#286a90}.foot{padding-top:30px;font-size:13px;max-width:780px}.rules{margin-top:16px;font-size:14px}code{font-family:monospace}.safe{max-width:480px;margin-top:12px}@media(max-width:720px){main{padding:28px 18px}.three{grid-template-columns:1fr;max-width:460px;margin:auto}.actual{gap:28px}.board{min-width:620px}.scroll{overflow:auto}}
+  </style>
+</head>
+<body>
+<main>
+  <h1>未完成 · C 存片 / 近方形 v2</h1>
+  <p>主体宽度缩小 6%，适度压低总高度，让宽高比从 0.86∶1 接近 0.96∶1。三层海蓝、排列方式与开放曲线保留。</p>
+  <p class="note">矢量候选 v2 · 旧版保留 · 未替换 App · 未安装 · 未定稿</p>
+  <section class="three">
+    <figure><img src="reference-original.png" alt="上一版矢量候选"><figcaption>上一版<div class="small">较修长，桌面占比偏满</div></figcaption></figure>
+    <figure><img src="shrink-only.png" alt="只缩小6%的对照项"><figcaption>只缩小 6%<div class="small">用于区分大小变化与比例变化</div></figcaption></figure>
+    <figure><img src="icon-1024.png" alt="缩小并接近正方形的新候选"><figcaption>本次推荐<div class="small">缩小 + 近方形，间隙单独补偿</div></figcaption></figure>
+  </section>
+  <h2>实际桌面大小</h2>
+  <p class="note">以下按 48px / 64px 原尺寸显示；请使用 100% 页面缩放。浏览器像素不等于每台手机的最终桌面尺寸。</p>
+  <div class="actual">
+    <div class="sample"><img src="reference-48.png" width="48" height="48" alt="上一版48px"><img src="reference-64.png" width="64" height="64" alt="上一版64px"><div>上一版<br>48 / 64px</div></div>
+    <div class="sample"><img src="color-48.png" width="48" height="48" alt="新版彩色48px"><img src="color-64.png" width="64" height="64" alt="新版彩色64px"><div>近方形新版<br>48 / 64px</div></div>
+    <div class="sample"><img src="mono-48.png" width="48" height="48" alt="单色48px"><img src="mono-64.png" width="64" height="64" alt="单色64px"><div>单色矢量<br>48 / 64px</div></div>
+  </div>
+  <h2>多裁切 / 壁纸 / 主题着色</h2>
+  <p class="note">模拟预览，不是真机截图。超椭圆为近似形状；邻近图形为占位符，不能据此判断实际品牌混淆。</p>
+  <div class="scroll"><img class="board" src="desktop-simulation.png" alt="三种模拟壁纸下的四组裁切与单色预览"></div>
+  <h2>三层海蓝</h2>
+  <div class="swatches"><span class="swatch"><i style="background:#5DB2D0"></i>浅水 #5DB2D0</span><span class="swatch"><i style="background:#2876A7"></i>中水 #2876A7</span><span class="swatch"><i style="background:#154E81"></i>深水 #154E81</span></div>
+  <h2>编辑与平台资源</h2>
+  <p><a href="mark-source.svg">形状源 SVG</a> · <a href="icon-master.svg">108dp 主文件</a> · <a href="monochrome.svg">单色层</a> · <a href="asset-qa.json">静态检查数据</a> · <a href="README.md">候选包说明</a></p>
+  <p class="note">以下安全区线框只用于检查，不出现在发布图标中。</p>
+  <img class="board safe" src="safe-zone.png" alt="108dp画布、72dp可见视口和66dp安全圆">
+  <p class="rules">平台依据：<a href="https://developer.android.com/develop/ui/compose/system/icon_design_adaptive">Android 自适应图标官方指南</a>。原生候选资源保存在 <code>android-candidate/res/</code>，没有修改当前 App 的图标引用。</p>
+  <p class="foot">本轮只调整桌面大小和近方形比例，保留上一版，不验证用户是否能猜出 App 名字。先审核新版大小与间隙，再在获准替换图标后做真实桌面检查。</p>
+</main>
+</body>
+</html>

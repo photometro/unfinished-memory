@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>未完成 · 四时与潮位核对</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f2f1e9;color:#304440;font-family:system-ui,"Microsoft YaHei",sans-serif;padding:28px}main{max-width:1100px;margin:auto}h1{font-size:24px;font-weight:500;margin:0 0 12px}p{font-size:13px;line-height:1.9;color:#60716b}a{color:inherit}section{margin:24px 0}h2{font-size:16px;font-weight:500;margin:14px 0}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}figure{margin:0}figcaption{font-size:12px;margin:10px 0;color:#53665d}.frame{width:100%;aspect-ratio:390/844;overflow:hidden;position:relative;border-radius:14px;background:#b8c7c3;box-shadow:0 5px 18px #4c605116}.frame img{position:absolute;max-width:none;display:block}details{margin-top:30px}summary{font-size:14px;cursor:pointer}footer{margin-top:30px;font-size:12px;color:#6c7c74}@media(max-width:540px){body{padding:18px}.grid{gap:8px}h1{font-size:20px}figcaption{font-size:10px}.frame{border-radius:9px}}
+</style></head><body><main><h1>同一片潮滩，四种光照与三种水位</h1><p>真实版原型 13 · 下面均来自当前浏览器实际截图，不是另画的 UI 示意。四列依次为早上／中午／下午／夜晚；每行固定同一潮位。图片只以 CSS 裁出截图里的 App 区域，原始完整截图与运行数据均保留；此对照页不是实际窗口尺寸测试。</p><p><a href="../../?variant=A&period=morning">返回可操作原型 →</a></p><div id="gl"></div><details><summary>静态降级对照 · 四时低潮与高潮</summary><div id="static"></div></details><footer>光照和潮位独立；八分钟艺术潮汐仅为原型参数，不对应现实潮表。具体光照与潮位效果仍待视觉验收。</footer></main>
+<script type="module">
+const records=await fetch('./matrix.json').then(r=>r.json());
+const labels={morning:'早上',noon:'中午',afternoon:'下午',night:'夜晚'}, tides={low:'低潮 · 潮沟显露',mid:'中潮 · 湿滩与浅水',high:'高潮 · 支沟逐渐淹没'};
+for(const [backend,levels] of [['webgl',['low','mid','high']],['static',['low','high']]])for(const level of levels){
+  const section=document.createElement('section'),h=document.createElement('h2'),grid=document.createElement('div');h.textContent=tides[level];grid.className='grid';section.append(h,grid);
+  for(const period of Object.keys(labels)){
+    const r=records.find(r=>r.period===period&&r.tideName===level&&r.surface.renderer===backend);if(!r)continue;
+    const figure=document.createElement('figure'),frame=document.createElement('div'),img=document.createElement('img'),caption=document.createElement('figcaption');frame.className='frame';img.src=r.file;img.alt=labels[period]+' '+tides[level]+'实际原型';
+    // The screenshot backend uses a 1082px-wide layout, not the DOM inspection
+    // viewport. These bounds come from the saved screenshots, not device CSS.
+    const crop={x:629,y:120,width:390,height:844,imageWidth:1082};
+    img.style.width=(crop.imageWidth/crop.width*100)+'%';img.style.left=(-crop.x/crop.width*100)+'%';img.style.top=(-crop.y/crop.height*100)+'%';
+    caption.textContent=labels[period]+' · '+r.surface.renderer;frame.append(img);figure.append(frame,caption);grid.append(figure);
+  }
+  document.querySelector(backend==='webgl'?'#gl':'#static').append(section);
+}
+</script></body></html>

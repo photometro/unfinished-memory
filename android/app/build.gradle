@@ -5,16 +5,76 @@ plugins {
     id 'org.jetbrains.kotlin.kapt'
 }
 
+def protocolTestBuild = project.hasProperty('protocolTest')
+def native11TestBuild = project.hasProperty('native11Test')
+if (protocolTestBuild && native11TestBuild) {
+    throw new GradleException('Choose only one isolated test application id.')
+}
+
 android {
     namespace 'com.unfinished.app'
     compileSdk 36
 
     defaultConfig {
         applicationId 'com.unfinished.app'
-        minSdk 26
+        minSdk 33
         targetSdk 36
         versionCode 4
         versionName '0.4.0'
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        manifestPlaceholders = [
+                appLabel: native11TestBuild ? '未完成·第11条测试' : (protocolTestBuild ? '未完成·协议测试' : '未完成'),
+                mainActivityTheme: '@style/Theme.Unfinished'
+        ]
+        buildConfigField 'boolean', 'IMAGE_FIRST_FRAME_STARTUP', 'false'
+    }
+
+    buildTypes {
+        debug {
+            manifestPlaceholders = [
+                    appLabel: native11TestBuild ? '未完成·第11条测试' : (protocolTestBuild ? '未完成·协议测试' : '未完成'),
+                    mainActivityTheme: '@style/Theme.Unfinished.StartupExperiment'
+            ]
+            buildConfigField 'boolean', 'IMAGE_FIRST_FRAME_STARTUP', 'true'
+            if (native11TestBuild) {
+                applicationIdSuffix '.native11test'
+            } else if (protocolTestBuild) {
+                applicationIdSuffix '.protocoltest'
+            }
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        benchmark {
+            initWith release
+            applicationIdSuffix '.native11benchmark'
+            signingConfig signingConfigs.debug
+            matchingFallbacks = ['release']
+            manifestPlaceholders = [
+                    appLabel: '未完成·性能基准',
+                    mainActivityTheme: '@style/Theme.Unfinished.StartupExperiment'
+            ]
+            buildConfigField 'boolean', 'IMAGE_FIRST_FRAME_STARTUP', 'true'
+            proguardFiles 'proguard-benchmark-rules.pro'
+        }
+        startupImageExperiment {
+            initWith debug
+            applicationIdSuffix '.startupexperiment'
+            matchingFallbacks = ['debug']
+            manifestPlaceholders = [
+                    appLabel: '未完成·首帧实验',
+                    mainActivityTheme: '@style/Theme.Unfinished.StartupExperiment'
+            ]
+            buildConfigField 'boolean', 'IMAGE_FIRST_FRAME_STARTUP', 'true'
+        }
+    }
+    sourceSets {
+        androidTest.assets.srcDirs += "$projectDir/schemas"
+        // Keep the isolated benchmark app's launch path aligned with the current
+        // Debug startup image without changing the production Release variant.
+        benchmark.res.srcDirs += "$projectDir/src/startupImageExperiment/res"
     }
 
     compileOptions {
@@ -28,28 +88,74 @@ android {
 
     buildFeatures {
         compose true
+        buildConfig true
     }
 
     packaging {
         resources.excludes += '/META-INF/{AL2.0,LGPL2.1}'
     }
+
 }
 
 dependencies {
     implementation platform("androidx.compose:compose-bom:${rootProject.ext.composeBomVersion}")
     implementation 'androidx.activity:activity-compose:' + rootProject.ext.activityComposeVersion
+    implementation 'androidx.core:core-splashscreen:1.0.1'
     implementation 'androidx.compose.ui:ui'
     implementation 'androidx.compose.ui:ui-tooling-preview'
     implementation 'androidx.compose.material3:material3'
+    implementation 'io.github.kyant0:backdrop:1.0.0'
     implementation 'androidx.lifecycle:lifecycle-runtime-compose:' + rootProject.ext.lifecycleVersion
     implementation 'androidx.core:core-ktx:' + rootProject.ext.coreKtxVersion
+    implementation 'androidx.profileinstaller:profileinstaller:1.4.1'
     implementation 'androidx.room:room-runtime:2.7.2'
+    implementation 'androidx.room:room-ktx:2.7.2'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2'
     kapt 'androidx.room:room-compiler:2.7.2'
 
+    benchmarkImplementation 'androidx.tracing:tracing:1.3.0'
+    benchmarkImplementation 'org.jetbrains.kotlin:kotlin-stdlib:2.2.20'
+
     debugImplementation 'androidx.compose.ui:ui-tooling'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test:runner:1.6.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.room:room-testing:2.7.2'
+    androidTestImplementation platform("androidx.compose:compose-bom:${rootProject.ext.composeBomVersion}")
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
+    debugImplementation 'androidx.compose.ui:ui-test-manifest'
 }
 
 kapt {
     correctErrorTypes = true
+    arguments { arg('room.schemaLocation', "$projectDir/schemas") }
 }
+
+// Fail on new fixed UI copy that the startup subset cannot render. The full
+// font stays unchanged for memory content. This gate needs no Python/runtime
+// dependency; prepare-ui-font.py is only used to regenerate the asset.
+def uiFontManifest = file('../../tools/ui-font-manifest.json')
+tasks.register('verifyOpeningFontCoverage') {
+    def uiSources = fileTree('src/main/java/com/unfinished/app/ui') { include '*.kt' }
+    def activitySource = file('src/main/java/com/unfinished/app/MainActivity.kt')
+    def sourceFont = file('src/main/res/font/noto_sans_sc_variable.ttf')
+    def uiFont = file('src/main/res/font/noto_sans_sc_ui_variable.ttf')
+    inputs.files(uiFontManifest, uiSources, activitySource, sourceFont, uiFont)
+    doLast {
+        def manifest = new groovy.json.JsonSlurper().parse(uiFontManifest)
+        def digest = { font -> java.security.MessageDigest.getInstance('SHA-256').digest(font.bytes).encodeHex().toString() }
+        if (digest(sourceFont) != manifest.source_sha256 || digest(uiFont) != manifest.subset_sha256) {
+            throw new GradleException('UI font manifest is stale; run tools/prepare-ui-font.py.')
+        }
+        def full = manifest.source_codepoints as Set
+        def covered = manifest.subset_codepoints as Set
+        def missing = new HashSet()
+        (uiSources.files + activitySource).each { source ->
+            source.getText('UTF-8').codePoints().forEach { point ->
+                if (full.contains(point) && !covered.contains(point)) missing.add(point)
+            }
+        }
+        if (!missing.empty) throw new GradleException("New UI glyphs need subset regeneration: ${missing}")
+    }
+}
+tasks.named('preBuild').configure { dependsOn('verifyOpeningFontCoverage') }

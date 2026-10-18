@@ -3,7 +3,8 @@ param(
     [ValidateSet('debug', 'release')]
     [string]$Mode = 'debug',
     [switch]$AllowNetwork,
-    [switch]$Install
+    [switch]$Install,
+    [string]$TargetSerial
 )
 
 $projectRoot = Split-Path -Parent $PSScriptRoot
@@ -101,6 +102,17 @@ try {
             throw "apksigner not found under $env:ANDROID_HOME\build-tools"
         }
 
+        $aapt = Get-ChildItem -LiteralPath (Join-Path $env:ANDROID_HOME 'build-tools') -Filter aapt.exe -Recurse -ErrorAction SilentlyContinue |
+            Sort-Object FullName -Descending | Select-Object -First 1 -ExpandProperty FullName
+        if (-not $aapt) {
+            throw "aapt not found under $env:ANDROID_HOME\build-tools"
+        }
+        $badging = (& $aapt dump badging $apkPath 2>&1 | Out-String)
+        if ($LASTEXITCODE -ne 0 -or $badging -notmatch "(?m)^package: name='com\.unfinished\.app'") {
+            throw "Refusing device install: expected the ordinary com.unfinished.app APK, but the built artifact has a different or unreadable application ID."
+        }
+        "Verified APK application ID: com.unfinished.app" | Tee-Object -FilePath $logPath -Append
+
         $certText = (& $apksigner verify --print-certs $apkPath 2>&1 | Out-String)
         if ($LASTEXITCODE -ne 0 -or $certText -notmatch '(?im)certificate SHA-256 digest:\s*([0-9A-F:]+)') {
             throw "Unable to read APK signing certificate: $apkPath"
@@ -115,13 +127,31 @@ try {
         $deviceLines = @(& $adb devices)
         $online = @($deviceLines | Where-Object { $_ -match '^\S+\s+device(\s|$)' })
         $unauthorized = @($deviceLines | Where-Object { $_ -match '^\S+\s+unauthorized(\s|$)' })
-        if ($online.Count -eq 0) {
+        $requestedSerial = if ([string]::IsNullOrWhiteSpace($TargetSerial)) { $null } else { $TargetSerial.Trim() }
+        if ($requestedSerial) {
+            $requestedIsOnline = @($online | Where-Object { (($_ -split '\s+')[0]).Trim() -eq $requestedSerial }).Count -gt 0
+            if (-not $requestedIsOnline) {
+                $requestedIsUnauthorized = @($unauthorized | Where-Object { (($_ -split '\s+')[0]).Trim() -eq $requestedSerial }).Count -gt 0
+                if ($requestedIsUnauthorized) {
+                    throw "ADB device $requestedSerial is unauthorized. Unlock the phone and accept the USB debugging RSA prompt."
+                }
+                throw "Requested device $requestedSerial is not online. Connected devices: $($deviceLines -join '; ')"
+            }
+            $deviceSerial = $requestedSerial
+        }
+        elseif ($online.Count -eq 1) {
+            $deviceSerial = (($online[0] -split '\s+')[0]).Trim()
+        }
+        elseif ($online.Count -gt 1) {
+            $available = @($online | ForEach-Object { (($_ -split '\s+')[0]).Trim() }) -join ', '
+            throw "Multiple Android devices are online ($available). Pass -TargetSerial to choose the intended phone; no device was modified."
+        }
+        else {
             if ($unauthorized.Count -gt 0) {
                 throw "ADB device is unauthorized. Unlock the phone and accept the USB debugging RSA prompt."
             }
             throw "No online Android device found. Connect a device or start an emulator, then enable USB debugging."
         }
-        $deviceSerial = (($online[0] -split '\s+')[0]).Trim()
         "Device serial: $deviceSerial" | Tee-Object -FilePath $logPath -Append
 
         # If an existing package is present, compare certificates before allowing -r.

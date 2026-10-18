@@ -10,31 +10,37 @@ import java.net.URL
 
 data class EncryptedSyncRecord(
     val recordId: String,
+    val operationId: String,
     val entityType: String,
     val entityId: String,
     val version: Long,
     val ciphertext: String,
     val contentHash: String,
-    val deletedAt: Long? = null
+    val deletedAt: Long? = null,
+    val changeSequence: Long = 0L
 )
 
+data class PushAcknowledgement(val operationId: String, val outcome: String, val changeSequence: Long?)
+data class PushResponse(val acknowledgements: List<PushAcknowledgement>, val cursor: Long)
+
 interface SyncGateway {
-    suspend fun push(records: List<EncryptedSyncRecord>): Long
+    suspend fun push(records: List<EncryptedSyncRecord>): PushResponse
     suspend fun pull(cursor: Long, limit: Int = 200): PullBatch
 }
 
 data class PullBatch(val records: List<EncryptedSyncRecord>, val nextCursor: Long, val hasMore: Boolean)
 
-/** HTTP adapter for the anonymous server. It never sends decrypted Original/Cue content. */
+/** HTTP adapter only accepts server-issued credentials; local offline IDs are never bearer tokens. */
 class HttpSyncGateway(
     private val baseUrl: String,
     private val identityStore: VaultIdentityStore
 ) : SyncGateway {
-    override suspend fun push(records: List<EncryptedSyncRecord>): Long = withContext(Dispatchers.IO) {
+    override suspend fun push(records: List<EncryptedSyncRecord>): PushResponse = withContext(Dispatchers.IO) {
         val body = JSONObject().put("records", JSONArray().apply {
             records.forEach { record ->
                 put(JSONObject().apply {
                     put("recordId", record.recordId)
+                    put("operationId", record.operationId)
                     put("entityType", record.entityType)
                     put("entityId", record.entityId)
                     put("version", record.version)
@@ -44,8 +50,17 @@ class HttpSyncGateway(
                 })
             }
         })
-        val response = request("/api/sync/push", "POST", body.toString())
-        JSONObject(response).optLong("cursor", 0L)
+        val json = JSONObject(request("/api/sync/push", "POST", body.toString()))
+        val acks = mutableListOf<PushAcknowledgement>()
+        val array = json.optJSONArray("acknowledgements") ?: JSONArray()
+        for (index in 0 until array.length()) {
+            val item = array.getJSONObject(index)
+            acks += PushAcknowledgement(
+                item.getString("operationId"), item.getString("outcome"),
+                if (item.isNull("changeSequence")) null else item.getLong("changeSequence")
+            )
+        }
+        PushResponse(acks, json.optLong("cursor", 0L))
     }
 
     override suspend fun pull(cursor: Long, limit: Int): PullBatch = withContext(Dispatchers.IO) {
@@ -56,21 +71,22 @@ class HttpSyncGateway(
         for (index in 0 until array.length()) {
             val item = array.getJSONObject(index)
             items += EncryptedSyncRecord(
-                item.getString("recordId"), item.getString("entityType"), item.getString("entityId"),
-                item.getLong("version"), item.getString("ciphertext"), item.getString("contentHash"),
-                if (item.isNull("deletedAt")) null else item.getLong("deletedAt")
+                item.getString("recordId"), item.getString("operationId"), item.getString("entityType"),
+                item.getString("entityId"), item.getLong("version"), item.getString("ciphertext"),
+                item.getString("contentHash"), if (item.isNull("deletedAt")) null else item.getLong("deletedAt"),
+                item.getLong("changeSequence")
             )
         }
         PullBatch(items, json.optLong("nextCursor", cursor), json.optBoolean("hasMore"))
     }
 
     private fun request(path: String, method: String, body: String?): String {
-        val identity = identityStore.getOrCreate()
+        val credentials = identityStore.requireRemoteCredentials()
         val connection = (URL(baseUrl.trimEnd('/') + path).openConnection() as HttpURLConnection).apply {
             requestMethod = method
             connectTimeout = 8_000
             readTimeout = 20_000
-            setRequestProperty("Authorization", "Bearer ${identity.deviceToken}")
+            setRequestProperty("Authorization", "Bearer ${credentials.deviceToken}")
             setRequestProperty("Content-Type", "application/json")
             doOutput = body != null
         }

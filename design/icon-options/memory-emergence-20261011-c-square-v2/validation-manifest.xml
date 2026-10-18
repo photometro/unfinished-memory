@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="local.icon.resourcevalidation">
+    <application android:label="Icon resources validation only" android:icon="@mipmap/ic_launcher_fragment" android:hasCode="false" />
+</manifest>

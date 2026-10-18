@@ -1,0 +1,61 @@
+{
+  "status": "PASS: static asset checks only",
+  "reference": "<project-root>/design/icon-options/memory-emergence-20261011-c-square-v2/icon-1024.png",
+  "colors": [
+    "#5DB2D0",
+    "#2876A7",
+    "#154E81"
+  ],
+  "background": "#FEFEFB",
+  "sourcePaths": 3,
+  "sourceGeometry": "Restore slight vertical breathing room; change the two open curve rhythms independently",
+  "scale": 0.067650389,
+  "translate": [
+    11.583206059,
+    11.921458005
+  ],
+  "boundsDp": {
+    "minX": 32.148924334,
+    "maxX": 75.851075666,
+    "minY": 29.72102703,
+    "maxY": 78.27897297
+  },
+  "markSizeDp": [
+    43.702151333,
+    48.55794594
+  ],
+  "aspectRatio": 0.9,
+  "widthChangeFromV2": 0,
+  "heightChangeFromV2": 0.066666667,
+  "centerGapsDp": [
+    1.9,
+    1.8
+  ],
+  "safeCircleRadiusDp": 30.040835648,
+  "safeCircleMarginDp": 2.959164352,
+  "maskClippedSolidPixels": {
+    "circle": 0,
+    "squircle": 0,
+    "rounded": 0
+  },
+  "maskEdgeRasterDifferencePixels": {
+    "circle": 9,
+    "squircle": 15,
+    "rounded": 0
+  },
+  "foregroundPixels1080": 190481,
+  "checked": [
+    "Keep the installed v2 platform scale and mark width; no automatic scale-to-fit enlargement",
+    "Revised silhouette aspect ratio is 0.90:1",
+    "Entire mark fits within central 66dp circle",
+    "All three masks retain solid foreground pixels; minor antialias differences reported separately",
+    "Exactly three separated planes at center",
+    "SVG and Android XML share path data and fixed colors"
+  ],
+  "notChecked": [
+    "Recognition by users",
+    "Launcher/OEM theme rendering on phones with this candidate",
+    "An installed app with this icon",
+    "Subjective visual acceptance"
+  ]
+}

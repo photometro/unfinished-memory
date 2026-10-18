@@ -1,0 +1,110 @@
+- main:
+  - paragraph:
+    - text: 未完成
+    - generic: _
+    - generic: TIDAL LIGHT / 14
+  - link "查看抽象原型":
+    - /url: http://127.0.0.1:5188/?variant=A
+    - text: 查看抽象原型
+  - paragraph: 真实岸边 / 四步留下 / 潮汐树母图候选
+  - heading "把一段记忆， 交给流动的时间。" [level=1]:
+    - text: 把一段记忆，
+    - text: 交给流动的时间。
+  - paragraph:
+    - text: 写下、留线索、怎样回来、收好。
+    - text: 一步一页，补充按需进入。
+    - text: 纸船离开后，洋流依然流动。
+  - paragraph: 构图候选 · 未定版
+  - button "A · 横向潮滩" [pressed]
+  - button "B · 纵向潮沟"
+  - button "C · 留白海湾"
+  - paragraph: 母图 v4 · 局部光影与校准潮滩
+  - paragraph: 晨间暖亮冷影／中午清透／下午斜暖光／夜间柔和反光。旧开屏海面保留，首页沿连通潮沟与低洼涨退；潮位独立、缓慢变化。
+  - paragraph: 光照预览 · 设计预览
+  - group "海域时段":
+    - button "早上":
+      - generic: 早上
+    - button "中午":
+      - generic: 中午
+    - button "下午" [pressed]:
+      - generic: 下午
+    - button "晚上":
+      - generic: 晚上
+  - button "恢复当地时间自动"
+  - generic "环境与窗口检查 · 仅设计工作台"
+  - text: 模拟当地时钟 · 持续推进
+  - textbox "模拟当地时钟"
+  - text: 模拟潮位
+  - combobox "模拟潮位":
+    - option "缓慢艺术潮汐 · 约半日循环"
+    - option "八分钟加速 · 仅演示"
+    - option "低潮"
+    - option "中潮" [selected]
+    - option "高潮"
+  - text: 原型实际窗口
+  - combobox "原型实际窗口":
+    - option "弹性 · 当前容器"
+    - option "320x568"
+    - option "360x640"
+    - option "390x844" [selected]
+    - option "430x932"
+    - option "768x1024"
+  - checkbox "静态渲染降级预览"
+  - text: 静态渲染降级预览
+  - checkbox "文字放大 130% · 检查"
+  - text: 文字放大 130% · 检查
+  - checkbox "模拟安全区 · 上 44 / 下 34"
+  - text: 模拟安全区 · 上 44 / 下 34
+  - paragraph: 演示控制 · 不属于 App 功能
+  - button "安静岸边"
+  - button "演示记忆上岸"
+  - button "空池示例"
+  - button "纸船与洋流 · 设计预览"
+  - button "重播退潮"
+  - checkbox "下次提交失败 · 演示"
+  - text: 下次提交失败 · 演示
+  - checkbox "减少动画"
+  - text: 减少动画
+  - list:
+    - generic: "01"
+    - text: 写下 → 留线索 → 怎样回来 → 收好
+    - generic: "02"
+    - text: 保留折船动效，完成后洋流常显
+    - generic: "03"
+    - text: 岸边的四种选择
+    - generic: "04"
+    - text: 原文、回忆与现在的回应
+  - generic "边界与素材"
+  - status:
+    - paragraph: 页面：交给时间 · 光照：下午
+    - paragraph: 记录：4 条演示 · 当前会话：无
+    - paragraph: 回忆快照：0 · 可见线索：0
+    - paragraph: 载体：demo-memory-1791163232932 · 仅内存
+  - generic "横向潮滩手机原型":
+    - text: 下午 · 岸边
+    - button:
+    - paragraph: 此刻，没有需要赶赴的过去
+    - heading [level=2]: 今天海面 很安静。
+    - paragraph: 你可以留下一点，也可以只是停一会儿。
+    - paragraph: 潮水退去，痕迹留下
+    - navigation:
+      - button:
+        - generic: 留下一段
+      - button:
+        - generic: 过去
+    - paragraph: 交互原型 · 数据仅在本次预览
+    - paragraph: 交给时间
+    - heading "这一段， 随时间流动。" [active] [level=2]:
+      - text: 这一段，
+      - text: 随时间流动。
+    - paragraph: 不必知道它去向哪里。 此刻，先让它离开眼前。
+    - status: 已封存。它只是离开眼前，仍保留在「过去」。
+    - button "回到岸边":
+      - text: 回到岸边
+      - generic: →
+    - paragraph: 演示记录已在本次内存保留 · 刷新后清空
+  - paragraph: 真实版原型 14 · 局部光影 / 连通潮滩 / 旧开屏海面
+  - complementary "原型构图切换":
+    - button "上一种构图":
+    - generic: A · 横向潮滩
+    - button "下一种构图":

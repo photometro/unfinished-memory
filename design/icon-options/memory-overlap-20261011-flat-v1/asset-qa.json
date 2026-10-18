@@ -1,0 +1,75 @@
+{
+  "approvedSource": "approved-reference.png",
+  "builtInCutout": "foreground-cutout.png",
+  "canvasPixels": [
+    1254,
+    1254
+  ],
+  "components": [
+    {
+      "area": 517388,
+      "bounds": [
+        126,
+        424,
+        1052,
+        1123
+      ],
+      "meanRGB": [
+        44,
+        161,
+        251
+      ]
+    },
+    {
+      "area": 44952,
+      "bounds": [
+        886,
+        215,
+        1171,
+        415
+      ],
+      "meanRGB": [
+        252,
+        194,
+        33
+      ]
+    },
+    {
+      "area": 6074,
+      "bounds": [
+        982,
+        432,
+        1071,
+        517
+      ],
+      "meanRGB": [
+        252,
+        196,
+        34
+      ]
+    }
+  ],
+  "wholeMarkScaleDpPerPixel": 0.049022466572840144,
+  "sourceSizeOn1080Canvas": 615,
+  "translationPixels": [
+    222,
+    212
+  ],
+  "actualMaxRadiusDp": 31.7190794317868,
+  "safeRadiusDp": 33,
+  "pixelsOutsideSafeRadius": 0,
+  "majorMarkBoundsDp": [
+    28.379425837320575,
+    31.74425837320574,
+    79.62942583732057,
+    76.27535885167464
+  ],
+  "cornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "preservation": "Uniform whole-mark scale and translation only after imagegen background extraction; generated cutout is not guaranteed pixel-identical to original.",
+  "themeIconLimit": "Monochrome alpha keeps silhouette and two yellow-point silhouettes but cannot encode the two blue colors."
+}

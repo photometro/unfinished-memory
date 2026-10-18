@@ -35,6 +35,7 @@ public class DeviceController {
         UUID deviceId = UUID.randomUUID();
         String token = randomToken();
         jdbcTemplate.update("insert into vaults(vault_id) values (?)", vaultId);
+        jdbcTemplate.update("insert into sync_vault_locks(vault_id) values (?)", vaultId);
         jdbcTemplate.update("insert into devices(device_id, vault_id) values (?, ?)", deviceId, vaultId);
         jdbcTemplate.update("insert into device_tokens(token_id, device_id, token_hash) values (?, ?, ?)",
                 UUID.randomUUID(), deviceId, hashToken(token));

@@ -1,0 +1,108 @@
+{
+  "before": {
+    "width": 1254,
+    "height": 1254,
+    "components": [
+      {
+        "minX": 354,
+        "maxX": 899,
+        "minY": 242,
+        "maxY": 543,
+        "width": 546,
+        "height": 302,
+        "meanRGB": [
+          121,
+          184,
+          204
+        ],
+        "luma": 172.1,
+        "area": 135960
+      },
+      {
+        "minX": 353,
+        "maxX": 901,
+        "minY": 475,
+        "maxY": 766,
+        "width": 549,
+        "height": 292,
+        "meanRGB": [
+          59,
+          128,
+          162
+        ],
+        "luma": 115.8,
+        "area": 107362
+      },
+      {
+        "minX": 353,
+        "maxX": 901,
+        "minY": 722,
+        "maxY": 1011,
+        "width": 549,
+        "height": 290,
+        "meanRGB": [
+          26,
+          74,
+          114
+        ],
+        "luma": 66.7,
+        "area": 128840
+      }
+    ],
+    "leftSpread": 1,
+    "rightSpread": 2
+  },
+  "after": {
+    "width": 1254,
+    "height": 1254,
+    "components": [
+      {
+        "minX": 304,
+        "maxX": 949,
+        "minY": 241,
+        "maxY": 545,
+        "width": 646,
+        "height": 305,
+        "meanRGB": [
+          108,
+          182,
+          207
+        ],
+        "luma": 168.1,
+        "area": 163833
+      },
+      {
+        "minX": 304,
+        "maxX": 949,
+        "minY": 474,
+        "maxY": 766,
+        "width": 646,
+        "height": 293,
+        "meanRGB": [
+          48,
+          122,
+          164
+        ],
+        "luma": 109.3,
+        "area": 126763
+      },
+      {
+        "minX": 304,
+        "maxX": 949,
+        "minY": 721,
+        "maxY": 1012,
+        "width": 646,
+        "height": 292,
+        "meanRGB": [
+          25,
+          78,
+          123
+        ],
+        "luma": 70,
+        "area": 153658
+      }
+    ],
+    "leftSpread": 0,
+    "rightSpread": 0
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "status": "PASS: static asset checks only",
+  "reference": "<project-root>/design/icon-options/memory-emergence-20261011-c-gap-v5/c-concept.png",
+  "colors": [
+    "#5DB2D0",
+    "#2876A7",
+    "#154E81"
+  ],
+  "background": "#FEFEFB",
+  "sourcePaths": 3,
+  "sourceGeometry": "manual cubic redraw, not pixel-exact trace",
+  "scale": 0.071968499,
+  "translate": [
+    8.875751,
+    9.235593496
+  ],
+  "boundsDp": {
+    "minX": 30.754174758,
+    "maxX": 77.245825242,
+    "minY": 26.9398443,
+    "maxY": 81.0601557
+  },
+  "markSizeDp": [
+    46.491650484,
+    54.1203114
+  ],
+  "centerGapsDp": [
+    1.9,
+    1.8
+  ],
+  "safeCircleRadiusDp": 32.85,
+  "maskClippedSolidPixels": {
+    "circle": 0,
+    "squircle": 0,
+    "rounded": 0
+  },
+  "maskEdgeRasterDifferencePixels": {
+    "circle": 22,
+    "squircle": 16,
+    "rounded": 0
+  },
+  "foregroundPixels1080": 228195,
+  "checked": [
+    "Uniform scaling preserves source proportions",
+    "Entire mark fits within central 66dp circle",
+    "All three masks retain solid foreground pixels; minor antialias differences reported separately",
+    "Exactly three separated planes at center",
+    "SVG and Android XML share path data and fixed colors"
+  ],
+  "notChecked": [
+    "Recognition by users",
+    "Launcher/OEM theme rendering on phones",
+    "An installed app with this icon",
+    "Subjective visual acceptance"
+  ]
+}

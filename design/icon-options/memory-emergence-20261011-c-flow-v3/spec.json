@@ -1,0 +1,29 @@
+{
+  "name": "未完成 · C 存片 / 曲线修订 v3",
+  "status": "review-only-not-installed",
+  "baselineDirectory": "../memory-emergence-20261011-c-square-v2",
+  "reference": "<project-root>/design/icon-options/memory-emergence-20261011-c-square-v2/icon-1024.png",
+  "baselineSource": "../memory-emergence-20261011-c-square-v2/mark-source.svg",
+  "baselineScale": 0.06765038906,
+  "baselineDpSize": [43.70215133276, 45.52307429158],
+  "proportionControlScaleY": 1.066666666666667,
+  "background": "#FEFEFB",
+  "colors": ["#5DB2D0", "#2876A7", "#154E81"],
+  "monochrome": "#173E57",
+  "sourceViewport": 1254,
+  "sourceCenter": [627, 622],
+  "adaptiveViewportDp": 108,
+  "visibleViewportDp": 72,
+  "safeCircleDiameterDp": 66,
+  "exportScale": 0.06765038906,
+  "targetAspectRatio": 0.90,
+  "constraints": [
+    "Preserve three aligned planes, order, fixed palette and background",
+    "Keep the installed v2 mark width and uniform platform scale",
+    "Restore a small amount of height without scaling back to the safe-circle limit",
+    "Use two distinct curve rhythms rather than identical parallel gaps",
+    "No text, added object, texture, gradient, material, shadow or baked outer mask",
+    "Identical paths for editable SVG, color Android XML and monochrome Android XML",
+    "Review candidate only: do not change active Android resources or install an APK"
+  ]
+}

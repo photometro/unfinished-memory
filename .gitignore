@@ -37,3 +37,8 @@ server/target/
 # Local secrets used by tools
 local.properties
 google-services.json
+
+# Local agent/tool caches and Python bytecode
+.codex-tmp/
+__pycache__/
+*.py[cod]

@@ -1,0 +1,105 @@
+/* Study 18: scoped to leaving UI. Module colors, fonts, shore and ritual stay intact. */
+/* The workbench's narrow-screen top padding must not add a scrollable strip
+   above a full-height leaving task in the standalone app preview. */
+.studio.app-only:has(.leave-ui) { padding: 0; }
+.leave-ui { --leave-scale: 1; --leave-gutter: clamp(22px, 6cqw, 38px); }
+.app-window[data-text-scale="large"] .leave-ui { --leave-scale: 1.3; }
+.leave-header, .leave-editor-area, .leave-editor-tools, .leave-content, .leave-footer {
+  width: 100%; max-width: 600px; margin-inline: auto; padding-inline: var(--leave-gutter); box-sizing: border-box;
+}
+.leave-header {
+  display: grid; grid-template-columns: minmax(52px, 1fr) auto minmax(52px, 1fr); gap: 12px; align-items: center;
+  flex-shrink: 0; padding-block: max(16px, env(safe-area-inset-top)) 12px;
+}
+.leave-header h2 { font-size: calc(15px * var(--leave-scale)); font-weight: 500; line-height: 1.5; outline: none; }
+.leave-header button { min-height: 44px; min-width: 44px; display: flex; align-items: center; }
+.leave-back { justify-self: start; justify-content: flex-start; color: var(--ink); }
+.leave-header-action { justify-self: end; font-size: calc(15px * var(--leave-scale)); font-weight: 500; color: var(--task-action); }
+.leave-editor-area { display: flex; flex: 1; flex-direction: column; min-height: 0; gap: 18px; padding-block: clamp(24px, 6cqw, 38px) 12px; overflow-y: auto; scrollbar-width: thin; }
+.leave-ui .leave-editor {
+  display: block; flex: 1; width: 100%; min-height: 80px; resize: none; padding: 0; margin: 0;
+  border: 0; background: transparent; color: var(--ink); font-size: calc(18px * var(--leave-scale)); line-height: 1.95;
+  outline-offset: 5px; scrollbar-width: thin; overflow-wrap: anywhere;
+}
+.leave-ui :is(.leave-editor, .leave-cue-editor):focus-visible { outline: none; box-shadow: inset 0 -2px 0 var(--task-action); }
+.leave-editor-tools { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-shrink: 0; padding-block: 8px max(22px, env(safe-area-inset-bottom)); }
+.leave-tool, .leave-text-action { display: inline-flex; min-height: 44px; min-width: 44px; align-items: center; gap: 8px; color: var(--muted); font-size: calc(13px * var(--leave-scale)); text-align: left; }
+.leave-ui button:disabled { opacity: .45; cursor: default; }
+.leave-scroll { min-height: 0; flex: 1; overflow-y: auto; display: flex; flex-direction: column; scrollbar-width: thin; }
+.leave-ui .leave-scroll { padding-inline: 0; } /* One shared gutter, including narrow containers. */
+.leave-content { flex-shrink: 0; margin-block: auto; padding-block: 28px 36px; }
+.leave-review-content { margin-block: 0; padding-block: clamp(22px, 6cqw, 36px) 24px; }
+.leave-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; }
+.leave-section-heading h3 { font-size: calc(13px * var(--leave-scale)); color: var(--muted); font-weight: 400; }
+.leave-ui .leave-original-text { font-size: calc(20px * var(--leave-scale)); line-height: 1.85; white-space: pre-wrap; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.leave-ui .leave-original-text.expanded { display: block; }
+.leave-expand { margin-top: 4px; }
+.leave-cues { margin-top: clamp(28px, 8cqw, 40px); padding-top: 24px; border-top: 1px solid var(--line); }
+.leave-cue-heading { display: flex; align-items: baseline; gap: 12px; }
+.leave-cue-heading h3 { font-size: calc(16px * var(--leave-scale)); font-weight: 500; line-height: 1.7; }
+.leave-cue-heading > span, .leave-cue-source { color: var(--muted); font-size: calc(11px * var(--leave-scale)); line-height: 1.8; }
+.leave-cue-source { margin-top: 6px; }
+.leave-cue-list { display: grid; margin-top: 12px; gap: 2px; }
+.leave-cue-option { display: grid; grid-template-columns: minmax(0,1fr) 44px; align-items: center; column-gap: 8px; }
+.leave-cue-pick { display: flex; align-items: center; gap: 12px; min-height: 44px; cursor: pointer; font-size: calc(14px * var(--leave-scale)); line-height: 1.8; color: var(--muted); }
+.leave-cue-pick input { accent-color: var(--task-action); flex-shrink: 0; width: 17px; height: 17px; }
+.leave-cue-pick span { overflow-wrap: anywhere; }
+.leave-cue-pick small { margin-left: 8px; font-size: calc(10px * var(--leave-scale)); color: var(--muted); white-space: nowrap; }
+.leave-cue-option.adopted .leave-cue-pick { color: var(--ink); }
+.leave-cue-edit { display: flex; align-items: center; justify-content: flex-end; width: 44px; height: 44px; color: var(--muted); }
+.leave-cue-inline { grid-column: 1 / -1; display: flex; align-items: center; gap: 10px; margin-bottom: 10px; padding-left: 29px; }
+.leave-cue-inline input { width: 100%; min-width: 0; min-height: 44px; border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--ink); font-size: calc(14px * var(--leave-scale)); }
+.leave-own-cue { margin-top: 8px; }
+.leave-self-cue { margin-top: 18px; }
+.leave-ui .leave-self-cue textarea { display: block; width: 100%; min-height: 64px; padding: 6px 0; resize: vertical; border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--ink); font-size: calc(15px * var(--leave-scale)); line-height: 1.8; }
+.leave-ui :is(.leave-self-cue textarea, .leave-cue-inline input):focus-visible { outline: none; border-bottom-color: var(--task-action); box-shadow: 0 1px 0 var(--task-action); }
+.leave-return-summary { margin-top: 28px; }
+.leave-return-summary .leave-small-label { margin-bottom: 0; }
+.leave-return-summary > button { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; width: 100%; text-align: left; }
+.leave-return-summary > button > span:first-child { color: var(--ink); font-size: calc(15px * var(--leave-scale)); line-height: 1.8; }
+.leave-return-summary small { display: block; color: var(--muted); font-size: calc(12px * var(--leave-scale)); }
+.leave-summary-change { display: flex; align-items: center; flex-shrink: 0; gap: 6px; color: var(--muted); font-size: calc(12px * var(--leave-scale)); }
+.leave-background-link { display: flex; align-items: center; gap: 8px; min-height: 44px; max-width: 100%; color: var(--muted); font-size: calc(12px * var(--leave-scale)); line-height: 1.8; text-align: left; }
+.leave-background-link span { overflow-wrap: anywhere; }
+.leave-background-link svg { flex-shrink: 0; }
+.leave-footer { flex-shrink: 0; padding-block: 12px max(22px, env(safe-area-inset-bottom)); }
+.leave-ui .leave-seal-action { display: flex; justify-content: center; gap: 10px; width: 100%; min-height: 54px; font-size: calc(15px * var(--leave-scale)); }
+.leave-seal-note { text-align: center; font-size: calc(11px * var(--leave-scale)); color: var(--muted); line-height: 1.8; margin-top: 12px; }
+.leave-field-label { display: block; font-size: calc(14px * var(--leave-scale)); line-height: 1.8; color: var(--ink); }
+.leave-small-label { font-size: calc(12px * var(--leave-scale)); color: var(--muted); margin-bottom: 10px; }
+.leave-choice-list { display: grid; gap: 28px; }
+.leave-choice { display: flex; align-items: flex-start; gap: 14px; min-height: 52px; cursor: pointer; }
+.leave-choice input, .leave-source-list input { flex-shrink: 0; width: 18px; height: 18px; margin-top: 5px; accent-color: var(--task-action); }
+.leave-choice-title { display: block; font-size: calc(17px * var(--leave-scale)); line-height: 1.7; }
+.leave-choice-hint { display: block; font-size: calc(12px * var(--leave-scale)); line-height: 1.8; color: var(--muted); margin-top: 4px; }
+.leave-date-field { margin-top: 28px; padding-left: 32px; }
+.leave-ui :is(.leave-date-field, .leave-background-field) input { display: block; width: 100%; min-width: 0; min-height: 48px; padding-block: 12px; border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--ink); font-size: calc(15px * var(--leave-scale)); }
+.leave-preference-link { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; margin-top: 36px; min-height: 56px; padding-top: 16px; border-top: 1px solid var(--line); font-size: calc(13px * var(--leave-scale)); text-align: left; }
+.leave-preference-link > span:last-child { display: flex; gap: 8px; align-items: center; color: var(--muted); }
+.leave-background-fields { display: grid; gap: 24px; }
+.leave-background-field input::placeholder { font-size: calc(13px * var(--leave-scale)); color: var(--muted); opacity: 1; }
+.leave-source-list { margin-top: 32px; display: grid; gap: 12px; }
+.leave-source-list legend { margin-bottom: 12px; }
+.leave-source-list label { display: flex; align-items: center; gap: 12px; min-height: 44px; font-size: calc(14px * var(--leave-scale)); }
+.leave-source-list input { margin-top: 0; }
+.leave-photos { display: flex; flex-shrink: 0; gap: 12px; max-height: 142px; overflow-x: auto; padding: 5px 0; scrollbar-width: thin; }
+.leave-photos figure { position: relative; flex-shrink: 0; width: 86px; height: 86px; }
+.leave-photos figure.has-remove { height: 130px; }
+.leave-photos img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 6px; }
+.leave-photo-open { display: block; width: 100%; height: 86px; }
+.leave-photo-view { display: flex; align-items: center; justify-content: center; flex: 1; min-height: 0; padding: 12px var(--leave-gutter) max(22px, env(safe-area-inset-bottom)); }
+.leave-photo-view img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.leave-photo-remove { width: 86px; height: 44px; display: flex; align-items: center; justify-content: center; gap: 4px; color: var(--muted); font-size: calc(11px * var(--leave-scale)); }
+.leave-original .leave-photos { margin-top: 18px; }
+.record-photos { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px,1fr)); gap: 12px; margin-top: 18px; }
+.record-photos img { width: 100%; max-height: 380px; object-fit: contain; }
+.leave-ui .task-error { font-size: calc(12px * var(--leave-scale)); line-height: 1.8; margin-block: 0 12px; }
+.app-window[data-safe-preview="true"] .leave-header { padding-top: 44px; }
+.app-window[data-safe-preview="true"] :is(.leave-footer, .leave-editor-tools) { padding-bottom: 34px; }
+@container phone-study (max-width: 350px) {
+  .leave-section-heading { gap: 8px; }
+}
+@media (forced-colors: active) {
+  .leave-ui input[type="radio"] { accent-color: auto; }
+  .leave-seal-action, .leave-photo-remove { border: 1px solid ButtonText; }
+}
